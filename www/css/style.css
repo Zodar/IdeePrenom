@@ -1,0 +1,12 @@
+.the_name {
+	font-family: NunitoBold;
+	text-align: center;
+}
+
+.to_center, .infos_name {
+	text-align: center;
+}
+
+.to_bold {
+	font-weight: bold;
+}
