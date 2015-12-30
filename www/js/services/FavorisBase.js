@@ -4,12 +4,13 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, $ionicLoadi
 	self.callback = null;
 	
 	self.saveOne = function(callback, prenom) {
-	    var query = "INSERT INTO Favoris (prenom, genre, origine, frequence) VALUES ";
+	    var query = "INSERT INTO Favoris (prenom, genre, origine, frequence, sexe) VALUES ";
 	    query += "('" + 
 		prenom.prenom + "', '" +
 		prenom.genre + "', '" +
 		prenom.origine + "', '" +
-		prenom.frequence + "'); ";
+		prenom.frequence + "', '" +
+		prenom.sexe + "'); ";
 		
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			callback();

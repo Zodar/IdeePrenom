@@ -1,4 +1,4 @@
-services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV) {
+services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message) {
 
 	var self = this;
 	self.prenoms = null;
@@ -11,13 +11,9 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 		if (DEV) {
 			$cordovaSQLite.execute($rootScope.db, "DROP TABLE IF EXISTS Nom;", []).then(function(res) {
 				populateDB();
-				if (DEV) {
-					console.log("Table Nom supprimée");
-				}
+				Message.log("Table Nom supprimée");
 			}, function(error) {
-				if (DEV) {
-					console.error("DROP TABLE Nom: " + JSON.stringify(error));
-				}
+				Message.log("DROP TABLE Nom: " + JSON.stringify(error));
 			});
 		}
 		else {
@@ -72,7 +68,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 		var query = "CREATE TABLE IF NOT EXISTS Nom (id INTEGER PRIMARY KEY AUTOINCREMENT, prenom VARCHAR, genre VARCHAR, origine VARCHAR, frequence VARCHAR);";
 
 	    $cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
-			query = "CREATE TABLE IF NOT EXISTS Favoris (id INTEGER PRIMARY KEY AUTOINCREMENT, prenom VARCHAR, genre VARCHAR, origine VARCHAR, frequence VARCHAR);";
+			query = "CREATE TABLE IF NOT EXISTS Favoris (id INTEGER PRIMARY KEY AUTOINCREMENT, prenom VARCHAR, genre VARCHAR, origine VARCHAR, frequence VARCHAR, sexe VARCHAR);";
 			$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			    insertRows();
 			    if (DEV) {

@@ -1,4 +1,4 @@
-services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Parse) {
+services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Parse, Message) {
 
 	var self = this;
 	self.nbPrenoms = 1;
@@ -9,33 +9,31 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 			var prenom = res.rows.item(0);
 			callback(Parse.all(prenom));
 		}, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+			Message.erreur(err, "RandomPrenom.js l.12");
 		});
 	}
 	
-	self.withParams = function(callback, genre, frequence, origine) {
+	self.withParams = function(callback, genre, frequence, origine, lettre) {
 		var query = "SELECT * FROM Nom where 1 ";
 		
-		if (genre != "1" || frequence != "1" || origine != "1") {
-			if (genre != "1") {
-				query += "AND genre = '" + genre + "' ";
-			}
-			if (frequence != "1") {
-				if (frequence == "+1") {
-					query += "AND frequence > 1 ";
-				} else {
-					query += "AND frequence < 1 ";
-				}
-			}
-			if (origine != "1") {
-				query += "AND origine = '" + origine + "' ";
-			}
-			self.randomWithParams(callback, query);
-		} else {
-			self.randomWithParams(callback, query);
+		if (genre != "1") {
+			query += "AND genre = '" + genre + "' ";	
 		}
+		if (origine != "1") {
+			query += "AND origine = '" + origine + "' ";	
+		}
+		
+		if (lettre != "") {
+			query += "AND LOWER(SUBSTR(prenom, 1, 1)) = LOWER('" + lettre + "') ";			
+		}
+
+		if (frequence == "+1") {
+			query += "AND frequence > 1 ";
+		} else if (frequence != "1") {
+			query += "AND frequence < 1 ";
+		}
+		
+		self.randomWithParams(callback, query);
 	}
 	
 	self.randomWithParams = function(callback, query) {
@@ -48,9 +46,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 				callback(null);
 			}
 		}, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+			Message.erreur(err, "RandomPrenom.js l.49");
 		});
 	}
 	

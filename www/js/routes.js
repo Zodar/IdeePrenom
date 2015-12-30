@@ -26,15 +26,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		}
 	});
 
-	$stateProvider.state('app.single', {
-		url: '/accueil/:playlistId',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/playlist.html',
-				controller: 'PlaylistCtrl'
-			}
-		}
-	});
+//	$stateProvider.state('app.single', {
+//		url: '/accueil/:playlistId',
+//		views: {
+//			'menuContent': {
+//				templateUrl: 'templates/playlist.html',
+//				controller: 'PlaylistCtrl'
+//			}
+//		}
+//	});
   
 	$urlRouterProvider.otherwise('/app/accueil');
 });

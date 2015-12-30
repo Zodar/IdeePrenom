@@ -1,6 +1,7 @@
 .the_name {
 	font-family: NunitoBold;
 	text-align: center;
+	border-radius: 25px;
 }
 
 .to_center, .infos_name {
@@ -9,4 +10,12 @@
 
 .to_bold {
 	font-weight: bold;
+}
+
+.background_m {
+	background-color: #89cff0;
+}
+
+.background_f {
+	background-color: #f4c2c2;
 }

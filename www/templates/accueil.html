@@ -4,38 +4,39 @@
 			<div class="col col-center">
 								
 				<div class="row well">
-		  			<h1 class="col col-offset-10 col-80 the_name"> {{randomPrenom.prenom}} </h1>
+		  			<h1 class="background_{{randomPrenom.sexe}} col col-offset-33 col-33 the_name"> {{randomPrenom.prenom}} </h1>
   		     	</div>
-		
-				<div class="row well">
-		  			<button ng-click="addToFavoris();" class="button button-energized ion-heart col col-offset-33 col-33"> 
-		  			Ajouter aux favoris </button>	
-		     	</div>
 		
 				<div class="row well">
 		  			<p class="col col-offset-10 col-80 infos_name"> <b>Genre:</b> {{randomPrenom.genre}}, <b>Origine:</b> {{randomPrenom.origine}}, <b>Frequence:</b> {{randomPrenom.frequence}} </p>
 		     	</div>
-		     	
-		     	<!-- <div class="row">
-		  			<p class="col col-25"> Genre: {{randomPrenom.genre}} </p>
-		  			<p class="col col-75"> Origine: {{randomPrenom.origine}} </p>
+		
+				<div class="row well">
+		  			<button ng-click="addToFavoris();" class="button button-energized ion-heart col col-offset-25 col-25"> 
+		  				Ajouter aux favoris
+		  			</button>
+					<button ng-click="again();" class="col col-25 button button-positive">
+						Encore !
+					</button>
 		     	</div>
-		     	
-		     	<div class="row">
-		  			<p class="col col-100"> Frequence: {{randomPrenom.frequence}} </p>
-		  			<p class="col col-100"> (Peut varier selon les diffèrentes façon d'écrire le prénom) </p>
-		   		</div> -->
-		   		
+			     
+		        
 		   		<div class="list">
-		   			<div class="row">
+		   			<div class="row">	
+		   				<div class="col col-100">
+		        			<div class="item item-divider"> Lettre </div>
+						    <label class="item item-input">
+								<span class="input-label">Lettre commencant par:</span>
+								<input name="lettre" type="text" maxlength="1" ng-model="lettre.text">
+							</label>
+						</div>
+					</div>
+					
+					<div class="row">
 		   				<div class="col col-50">
 		        		    <div class="item item-divider"> Genre </div>
-					        
-					        <ion-radio ng-repeat="item in genreList"
-					                   ng-value="item.value"
-      				                   ng-change="genreChange(item)"			                   
-					                   ng-model="data.genre">
-					       		{{ item.text }}
+					        <ion-radio class="background_{{item.sexe}}" ng-repeat="item in genreList" ng-value="item.value" ng-change="genreChange(item)" ng-model="data.genre">
+					       		{{item.text}}
 					        </ion-radio>
 				        </div>
 				        <div class="col col-50">
@@ -46,21 +47,13 @@
 				                   ng-model="data.frequence"
 				                   ng-change="frequenceChange(item)"
 				                   name="frequence">
-				          {{ item.text }}
+				          {{item.text}}
 				        </ion-radio>
 				        </div>
 			        </div>
-			     </div>
+			    </div>
 		     	
-		     	<div class="row">
-		     		<button ng-click="again();" class="col col-offset-33 col-33 button button-positive"> Encore ! </button>
-		     	</div>
 	     	</div>
      	</div>
-<!--      	<ion-list> -->
-<!--       		<ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}"> -->
-<!--         		{{playlist.title}} -->
-<!--       		</ion-item> -->
-<!--     	</ion-list> -->
   	</ion-content>
 </ion-view>

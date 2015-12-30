@@ -1,8 +1,9 @@
-controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV) {
+controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
 	
 	$scope.genre = "1";
 	$scope.frequence = "1";
 	$scope.origine = "1";
+	$scope.lettre = {text: ''};
 	
 	$scope.data = {
 		genre: '1',
@@ -10,9 +11,9 @@ controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase
 	};
 	
 	$scope.genreList = [
-		{text: "Tout", value: "1"},
-		{text: "Garçon", value: "m"},
-		{text: "Fille", value: "f"}
+		{text: "Tout", sexe: "*", value: "1"},
+		{text: "Garçon", sexe: "m", value: "m"},
+		{text: "Fille", sexe: "f", value: "f"}
 	];
 	
 	$scope.frequenceList = [
@@ -38,34 +39,16 @@ controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase
 	}
 	
 	function favorisAdded() {
-		if (DEV && !window.cordova) {
-			alert("Favori ajouté !");
-		}
-		else {
-			$cordovaToast.show('Favori ajouté !', 'short', 'center').then(function(success) {
-		      // success
-		    }, function (error) {
-		    	console.error(error);
-		    });	
-		}
+		Message.shortCenter("Favori ajouté !");
 	}
 	
 	$scope.again = function() {
-		RandomPrenom.withParams(randomResult, $scope.genre, $scope.frequence, $scope.origine);	
+		RandomPrenom.withParams(randomResult, $scope.genre, $scope.frequence, $scope.origine, $scope.lettre.text);
 	}
 	
 	function randomResult(res) {
 		if (res == null) {
-			if (DEV && !window.cordova) {
-				alert("Aucun résultat");	
-			}
-			else {
-				$cordovaToast.show('Aucun résultat', 'short', 'center').then(function(success) {
-			      // success
-			    }, function (error) {
-			    	console.error(error);
-			    });	
-			}
+			Message.longBottom("Aucun résultat !");
 		} else {
 			$scope.randomPrenom = res;		
 		}

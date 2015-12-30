@@ -1,44 +1,46 @@
 services.factory('Parse', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV) {
 
 	var self = this;
+	self.prenom = null;
 	
 	self.all = function(prenom) {
-		prenom.prenom = self.up(prenom.prenom);
-		prenom.genre = self.genre(prenom.genre);
-		prenom.frequence = self.frequence(prenom.frequence);
-		prenom.origine = self.origine(prenom.origine);
-		return prenom;
+		self.prenom = prenom;
+		self.up();
+		self.genre();
+		self.origine();
+		self.frequence();
+		return self.prenom;
 	}
 	
-	self.up = function(string) {
-	    return string.charAt(0).toUpperCase() + string.slice(1);
+	self.up = function() {
+		self.prenom.prenom = self.prenom.prenom.charAt(0).toUpperCase() + self.prenom.prenom.slice(1);
 	}
 	
-	self.genre = function(genre) {
-		return genre == "f" ? "Fille" : "Garçon";
+	self.genre = function() {
+		self.prenom.sexe = self.prenom.genre;
+		self.prenom.genre = self.prenom.genre == "f" ? "Fille" : "Garçon";
 	}
 	
-	self.origine = function(origine) {
-		origine = origine == "" ? "Non répértorié" : origine;
-		origine = origine == "?" ? "Non répértorié" : origine;
-		return self.up(origine);
+	self.origine = function() {
+		self.prenom.origine = self.prenom.origine == "" ? "Non répértorié" : self.prenom.origine;
+		self.prenom.origine = self.prenom.origine == "?" ? "Non répértorié" : self.prenom.origine;
 	}
 	
-	self.frequence = function(frequence) {
-		if (frequence > 3) {
-			return "Extrement commun";
-		} else if (frequence > 2) {
-			return "Très commun";
-		} else if (frequence > 1) {
-			return "Commun";
-		} else if (frequence > 0.5) {
-			return "Peu commun";
-		} else if (frequence > 0.2) {
-			return "Rare";
-		} else if (frequence > 0) {
-			return "Très rare"
+	self.frequence = function() {
+		if (self.prenom.frequence > 3) {
+			self.prenom.frequence = "Extrement commun";
+		} else if (self.prenom.frequence > 2) {
+			self.prenom.frequence = "Très commun";
+		} else if (self.prenom.frequence > 1) {
+			self.prenom.frequence = "Commun";
+		} else if (self.prenom.frequence > 0.5) {
+			self.prenom.frequence = "Peu commun";
+		} else if (self.prenom.frequence > 0.2) {
+			self.prenom.frequence = "Rare";
+		} else if (self.prenom.frequence > 0) {
+			self.prenom.frequence = "Très rare"
 		} else {
-			return "Non répértorié";
+			self.prenom.frequence = "Non répértorié";
 		}
 	}
 	
