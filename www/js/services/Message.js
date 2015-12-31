@@ -42,17 +42,14 @@ services.factory('Message', function(DEV, $cordovaToast) {
 	self.erreur = function(erreur, line) {
 		if (!window.cordova) {
 			alert("Une erreur s'est produite");
-		}
-		else {
-			$cordovaToast.show("Une erreur s'est produite", 'short', 'top').then(function(success) {
-				if (DEV) {
-					console.log("Message affiché");
-				}
-		    });
-		}
-		if (DEV) {
 			console.log("Erreur: " + line);
 			console.error(erreur);	
+		}
+		else {
+			self.shortCenter("Une erreur s'est produite");
+			if (DEV) {
+				console.log(JSON.stringify(erreur));
+			}
 		}
 	}
 	

@@ -23,7 +23,7 @@
 		        			Favoris
 	        			</div>
 					    <ion-list>
-					    <ion-item ng-repeat="item in listFavoris" class="item background_{{item.sexe}}">
+					    <ion-item ng-repeat="item in listFavoris" ng-click="deleteOne(item);" class="item background_{{item.sexe}}">
 					    		<p class="to_bold"> {{item.prenom}} </p>
 				       			<p> {{item.origine}}, {{item.frequence}} </p>
 			       		</ion-list>

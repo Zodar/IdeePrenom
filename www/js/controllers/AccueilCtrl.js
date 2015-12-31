@@ -1,5 +1,27 @@
-controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
+controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
 	
+	$scope.$on('$ionicView.enter', function(e) {
+		getOrigins();
+	});
+	
+	function getOrigins() {
+		if ($rootScope.finishPopulate) {
+			RandomPrenom.getAllOrigins(getOriginsSuccess);
+		} else {
+			setTimeout(getOrigins, 5);
+		}
+	}
+	
+	function getOriginsSuccess(result) {
+		$scope.origins = result;
+	}
+	
+	$scope.dataOrigins = {
+		origins: null,
+		multipleSelect: [],
+	};
+	
+	$scope.origins = [];
 	$scope.genre = "1";
 	$scope.frequence = "1";
 	$scope.origine = "1";
@@ -35,15 +57,15 @@ controllers.controller('AccueilCtrl', function($scope, RandomPrenom, FavorisBase
 	}
 	
 	$scope.addToFavoris = function() {
-		FavorisBase.saveOne(favorisAdded, $scope.randomPrenom);
+		FavorisBase.saveOne(favorisAdded, $scope.randomPrenom, true);
 	}
 	
-	function favorisAdded() {
-		Message.shortCenter("Favori ajouté !");
+	function favorisAdded(message) {
+		Message.shortCenter(message);
 	}
 	
 	$scope.again = function() {
-		RandomPrenom.withParams(randomResult, $scope.genre, $scope.frequence, $scope.origine, $scope.lettre.text);
+		RandomPrenom.withParams(randomResult, $scope.genre, $scope.frequence, $scope.dataOrigins.origins, $scope.lettre.text);
 	}
 	
 	function randomResult(res) {

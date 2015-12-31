@@ -1,4 +1,4 @@
-services.factory('NombrePrenom', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV) {
+services.factory('NombrePrenom', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message) {
 
 	var self = this;
 	self.callback = null;
@@ -8,14 +8,11 @@ services.factory('NombrePrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 			self.callback = callback;
 		if ($rootScope.finishPopulate) {
 			$cordovaSQLite.execute($rootScope.db, "SELECT * FROM Nom;", []).then(function(res) {
-				if (DEV)
-					console.log("Nombre de prénoms: " + res.rows.length);
+				Message.log("Nombre de prénoms: " + res.rows.length)
 				$rootScope.nbPrenoms = res.rows.length;
 				self.callback();
 			}, function (err) {
-				if (DEV) {
-					console.error(err);
-				}
+				Message.erreur(err, "NombrePrenom.js l.15");
 			});
 		} else {
 			setTimeout(self.getAll, 50);

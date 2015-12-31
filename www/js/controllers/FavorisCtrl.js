@@ -1,8 +1,32 @@
-controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message) {
+controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $ionicPopup) {
 	
 	$scope.$on('$ionicView.enter', function(e) {
 		initPage();
 	});
+	
+	$scope.deleteOne = function(prenom) {
+		var index;
+		$ionicPopup.show({title: 'Suppression',
+			subTitle: 'Voulez vous supprimer ce favori ?',
+			buttons: [{text: '<b>Supprimer</b>', type: 'button-positive',
+				onTap: function(e) {
+					FavorisBase.deleteOne(deleteOneSuccess, prenom);
+					angular.forEach($scope.listFavoris, function(value, key) {
+						if (value.prenom == prenom.prenom) {
+							index = $scope.listFavoris.indexOf(value);
+							if (index > -1) {
+								$scope.listFavoris.splice(index, 1);
+							}
+						} 
+					});
+				}
+			}, {text: 'Annuler'}]
+		});
+	}
+	
+	function deleteOneSuccess(message) {
+		Message.shortCenter(message);
+	}
 	
 	/**
 	 * Au lancement de la page.

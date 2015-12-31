@@ -17,7 +17,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			});
 		}
 		else {
-			populateDB();		
+			populateDB();
 		}
 	}
 	
@@ -29,33 +29,23 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 	    	if (res.rows.length == 0) {
 	    		$ionicLoading.show({template: "Chargement des prénoms"});
 	    		getFile();
-	    		if (DEV) {
-	    			console.log("Pas de tables");			
-	    		}
+	    		Message.log("Pas de tables");			
 		    } else {
-		    	if (DEV) {
-	    			console.log("Table 'Nom' existe.");			
-	    		}
+		    	Message.log("Table 'Nom' existe.");
 	            $rootScope.finishPopulate = true;
 	    	}
         }, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+        	Message.erreur(err, "InitDb.js l.38");
 		});
 	}
 	
 	function getFile() {
 		$http({method: 'GET', url: 'prenoms/prenoms.csv'}).then(function success(response) {
-			if (DEV) {
-				console.log("prenoms.csv récuperé");
-			}
+			Message.log("prenoms.csv récuperé");
 			self.prenoms = response.data;
 			initData();
 		}, function error(response) {
-			if (DEV) {
-				console.error("getFile() " + JSON.stringify(error));
-			}
+			Message.erreur("getFile() " + JSON.stringify(error));
 		});
 	}
 	
@@ -71,18 +61,12 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			query = "CREATE TABLE IF NOT EXISTS Favoris (id INTEGER PRIMARY KEY AUTOINCREMENT, prenom VARCHAR, genre VARCHAR, origine VARCHAR, frequence VARCHAR, sexe VARCHAR);";
 			$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			    insertRows();
-			    if (DEV) {
-			    	console.log("Tables créees");
-			    }
+			    Message.log("Tables créees");
 			}, function (err) {
-				if (DEV) {
-					console.error(err);
-				}
+				Message.erreur(err, "InitDb.js l.66");
 			});
 		}, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+			Message.erreur(err, "InitDb.js l.69");
 		});
 	}
 	
@@ -102,15 +86,11 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 	    query = query.slice(0, -2);
 
 	    $cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
-			if (DEV) {
-				console.log("Prenoms enregistrés");
-        	}
+			Message.log("Prenoms enregistrés");
 			$ionicLoading.hide();
 		    $rootScope.finishPopulate = true;
 	    }, function (error) {
-			if (DEV) {
-				console.error(error);
-			}
+	    	Message.erreur(error, "InitDb.js l.93");
 		});
 	}
 	

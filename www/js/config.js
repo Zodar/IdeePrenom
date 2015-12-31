@@ -3,4 +3,4 @@ var controllers = angular.module('starter.controllers', []);
 var services = angular.module('starter.services', []);
 var config = angular.module('starter.config', []);
 
-config.constant('DEV', true); //DEV-PROD
+config.constant('DEV', false); //DEV-PROD

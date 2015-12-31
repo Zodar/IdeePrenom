@@ -3,28 +3,40 @@
 		<div class="row">
 			<div class="col col-center">
 								
-				<div class="row well">
+				<div class="row">
 		  			<h1 class="background_{{randomPrenom.sexe}} col col-offset-33 col-33 the_name"> {{randomPrenom.prenom}} </h1>
   		     	</div>
 		
-				<div class="row well">
+				<div class="row">
 		  			<p class="col col-offset-10 col-80 infos_name"> <b>Genre:</b> {{randomPrenom.genre}}, <b>Origine:</b> {{randomPrenom.origine}}, <b>Frequence:</b> {{randomPrenom.frequence}} </p>
 		     	</div>
 		
-				<div class="row well">
-		  			<button ng-click="addToFavoris();" class="button button-energized ion-heart col col-offset-25 col-25"> 
+				<div class="button-bar">
+		  			<button ng-click="addToFavoris();" class="button button-large button-energized ion-heart col col-50"> 
 		  				Ajouter aux favoris
 		  			</button>
-					<button ng-click="again();" class="col col-25 button button-positive">
+					<button ng-click="again();" class="button button-large button-positive col col-50">
 						Encore !
 					</button>
 		     	</div>
-			     
-		        
+		     	
 		   		<div class="list">
-		   			<div class="row">	
-		   				<div class="col col-100">
-		        			<div class="item item-divider"> Lettre </div>
+ 		   			<div class="row">
+			     		<div class="col col-50">
+			        		  <label class="item item-input item-select">
+							    <div class="input-label">
+							      Origine
+							    </div>
+							    <select name="origins" ng-model="dataOrigins.origins">
+							  		<option  value="1"> Toutes </option>
+							  		<option  ng-repeat="item in origins" value="{{item.origine}}"> {{item.origine}} </option>
+								</select>
+							  </label>
+						</div>
+<!-- 					</div> -->
+<!-- 		   			<div class="row"> -->
+		   				<div class="col col-50">
+<!-- 		        			<div class="item item-divider"> Lettre </div> -->
 						    <label class="item item-input">
 								<span class="input-label">Lettre commencant par:</span>
 								<input name="lettre" type="text" maxlength="1" ng-model="lettre.text">
@@ -40,15 +52,10 @@
 					        </ion-radio>
 				        </div>
 				        <div class="col col-50">
-				        <div class="item item-divider"> Frequence </div>
-				        
-				        <ion-radio ng-repeat="item in frequenceList"
-				                   ng-value="item.value"
-				                   ng-model="data.frequence"
-				                   ng-change="frequenceChange(item)"
-				                   name="frequence">
-				          {{item.text}}
-				        </ion-radio>
+				        	<div class="item item-divider"> Frequence </div>				        
+					        <ion-radio ng-repeat="item in frequenceList" ng-value="item.value" ng-model="data.frequence" ng-change="frequenceChange(item)" name="frequence">
+					          {{item.text}}
+					        </ion-radio>
 				        </div>
 			        </div>
 			    </div>
