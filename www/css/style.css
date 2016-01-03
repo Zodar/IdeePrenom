@@ -19,3 +19,8 @@
 .background_f {
 	background-color: #f4c2c2;
 }
+
+.prenom_favoris {
+	font-size: larger!important;
+	color: white!important;
+}

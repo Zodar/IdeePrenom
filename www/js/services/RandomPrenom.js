@@ -38,7 +38,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 		}
 		
 		if (origine != "1") {
-			query += "AND origine = '" + origine + "' ";	
+			query += "AND origine LIKE '%" + origine + "%' ";
 		}
 		
 		if (lettre != "") {

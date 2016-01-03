@@ -1,7 +1,8 @@
 controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
 	
 	$scope.$on('$ionicView.enter', function(e) {
-		getOrigins();
+//		getOrigins();
+		getOriginsSuccess()
 	});
 	
 	function getOrigins() {
@@ -12,12 +13,37 @@ controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom,
 		}
 	}
 	
-	function getOriginsSuccess(result) {
-		$scope.origins = result;
+	function getOriginsSuccess() {
+		var origins = [];
+		origins.push({origine: "african"});
+		origins.push({origine: "arabic"});
+		origins.push({origine: "biblical"});
+		origins.push({origine: "catalan"});
+		origins.push({origine: "chinese"});
+		origins.push({origine: "danish"});
+		origins.push({origine: "english"});
+		origins.push({origine: "german"});
+		origins.push({origine: "greek"});
+		origins.push({origine: "hungarian"});
+		origins.push({origine: "iranian"});
+		origins.push({origine: "irish"});
+		origins.push({origine: "indian"});
+		origins.push({origine: "italian"});
+		origins.push({origine: "jewish"});
+		origins.push({origine: "finnish"});
+		origins.push({origine: "french"});
+		origins.push({origine: "polish"});
+		origins.push({origine: "portuguese"});
+		origins.push({origine: "romanian"});
+		origins.push({origine: "russian"});
+		origins.push({origine: "spanish"});
+		origins.push({origine: "swedish"});
+		origins.push({origine: "turkish"});
+		$scope.origins = origins;
 	}
 	
 	$scope.dataOrigins = {
-		origins: null,
+		origins: "1",
 		multipleSelect: [],
 	};
 	

@@ -19,12 +19,12 @@
 			<div class="list">
 		   		<div class="row">
 		   			<div class="col col-100">
-		        		<div class="item item-divider">
+		        		<div class="item item-divider to_bold">
 		        			Favoris
 	        			</div>
 					    <ion-list>
 					    <ion-item ng-repeat="item in listFavoris" ng-click="deleteOne(item);" class="item background_{{item.sexe}}">
-					    		<p class="to_bold"> {{item.prenom}} </p>
+					    		<p class="to_bold prenom_favoris"> {{item.prenom}} </p>
 				       			<p> {{item.origine}}, {{item.frequence}} </p>
 			       		</ion-list>
 			        </div>
