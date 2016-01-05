@@ -4,38 +4,32 @@
 			<div class="col col-center">
 								
 				<div class="row">
-		  			<h1 class="background_{{randomPrenom.sexe}} col col-offset-25 col-50 the_name"> {{randomPrenom.prenom}} </h1>
+		  			<h1 class="background_{{randomPrenom.sexe}} col col-offset-25 col-50 the_name"> {{randomPrenom.prenom}}			  			
   		     	</div>
 		
 				<div class="row">
-		  			<p class="col col-offset-10 col-80 infos_name"> <b>Genre:</b> {{randomPrenom.genre}}, <b>Origine:</b> {{randomPrenom.origine}}, <b>Frequence:</b> {{randomPrenom.frequence}} </p>
-		     	</div>
-		
-				<div class="button-bar">
-		  			<button ng-click="addToFavoris();" class="button button-large button-energized ion-heart col col-50"> 
-		  				Ajouter aux favoris
-		  			</button>
-					<button ng-click="again();" class="button button-large button-positive col col-50">
-						Encore !
-					</button>
+		  			<p class="col col-offset-10 col-80 infos_name"> <b>Origine:</b> {{randomPrenom.origine}}, <b>Frequence:</b> {{randomPrenom.frequence}} </p>
 		     	</div>
 		     	
 		   		<div class="list">
  		   			<div class="row">
-			     		<div class="col col-50">
-			        		  <label class="item item-input item-select">
-							    <div class="input-label to_bold">
-							      Origine
-							    </div>
-							    <select name="origins" ng-model="dataOrigins.origins">
-							  		<option  value="1"> Toutes </option>
-							  		<option  ng-repeat="item in origins" value="{{item.origine}}"> {{item.origine}} </option>
+			     		<div class="col col-100">
+		        		    <div class="item item-divider to_bold label_input"> Origine </div>		     		
+<!-- 			        		  <label class="item item-input item-select"> -->
+<!-- 							    <div class="input-label to_bold"> -->
+<!-- 							      Origine -->
+<!-- 							    </div> -->
+							    <select id="select_origins" name="origins" ng-model="dataOrigins.origins">
+							  		<option value="1"> Toutes </option>
+							  		<option ng-repeat="item in origins" value="{{item.origine}}"> {{item.origine}} </option>
 								</select>
-							  </label>
+<!-- 							  </label> -->
 						</div>
-		   				<div class="col col-50">
+					</div>						
+		   			<div class="row">
+		     			<div class="col col-100">
+		        		    <div class="item item-divider to_bold label_input"> Prénom commencant par la lettre: </div>
 						    <label class="item item-input">
-								<span class="input-label to_bold">Lettre commencant par:</span>
 								<input name="lettre" type="text" maxlength="1" ng-model="lettre.text">
 							</label>
 						</div>
@@ -43,19 +37,27 @@
 					
 					<div class="row">
 		   				<div class="col col-50">
-		        		    <div class="item item-divider to_bold"> Genre </div>
+		        		    <div class="item item-divider to_bold label_input"> Genre </div>
 					        <ion-radio class="background_{{item.sexe}}" ng-repeat="item in genreList" ng-value="item.value" ng-change="genreChange(item)" ng-model="data.genre">
 					       		{{item.text}}
 					        </ion-radio>
 				        </div>
-				        <div class="col col-50">
-				        	<div class="item item-divider to_bold"> Frequence </div>				        
+		   			    <div class="col col-50">
+				        	<div class="item item-divider to_bold label_input"> Frequence </div>				        
 					        <ion-radio ng-repeat="item in frequenceList" ng-value="item.value" ng-model="data.frequence" ng-change="frequenceChange(item)" name="frequence">
 					          {{item.text}}
 					        </ion-radio>
 				        </div>
 			        </div>
 			    </div>
+   				<div class="button-bar">
+		  			<button ng-click="addToFavoris();" class="button button-large button-energized ion-heart col col-50"> 
+		  				Ajouter aux favoris
+		  			</button>
+					<button ng-click="again();" class="button button-large button-positive col col-50">
+						Encore !
+					</button>
+		     	</div>
 		     	
 	     	</div>
      	</div>

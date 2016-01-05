@@ -1,3 +1,6 @@
+#select_origins {
+	width: 100%;	
+}
 .the_name {
 	font-family: NunitoBold;
 	text-align: center;
@@ -23,4 +26,9 @@
 .prenom_favoris {
 	font-size: larger!important;
 	color: white!important;
+}
+
+.label_input {
+	background-color: darkcyan;
+	color: white;
 }
