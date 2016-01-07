@@ -2,11 +2,11 @@
 <widget id="com.zodar.ideeprenom" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>IdeePrenom</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Permet de trouver le prénom idéal pour votre bébé !
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
-    </author>
+  <author email="zodar@live.fr" href="http://tarik.alwaysdata.net/">
+      Tarik Merabet
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
