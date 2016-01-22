@@ -2,7 +2,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 
 	var self = this;
 	self.prenoms = null;
-	self.devNbPrenoms = 600;
+	self.devNbPrenoms = 200;
 	
 	self.init = function() {
 		$rootScope.finishPopulate = false;

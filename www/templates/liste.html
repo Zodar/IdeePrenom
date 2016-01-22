@@ -1,0 +1,20 @@
+<ion-view view-title="Liste">
+	<ion-content>
+	    <div>
+			<div class="list">
+		   		<div class="row">
+		   			<div class="col col-100">
+		        		<div class="item item-divider to_bold">
+		        			Prénoms
+	        			</div>
+					    <ion-list>
+					    <ion-item ng-repeat="item in listePrenoms" ng-click="addToFavoris(item);" class="item background_{{item.genre}}">
+					    		<p class="to_bold prenom_liste"> {{item.prenom}} </p>
+				       			<p> {{item.origine}}, {{item.frequence}} </p>
+			       		</ion-list>
+			        </div>
+		        </div>
+		   	</div>
+	    </div>
+  	</ion-content>
+</ion-view>

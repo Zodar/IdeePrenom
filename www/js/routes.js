@@ -1,15 +1,16 @@
 app.config(function($stateProvider, $urlRouterProvider) {
+	  
 	$stateProvider.state('app', {
 	    url: '/app',
 	    abstract: true,
-	    templateUrl: 'templates/menu.html',
+	    templateUrl: 'templates/tabs.html',
 	    controller: 'AppCtrl'
 	});
 	
 	$stateProvider.state('app.accueil', {
 		url: '/accueil',
 		views: {
-			'menuContent': {
+			'tab-home': {
 				templateUrl: 'templates/accueil.html',
 				controller: 'AccueilCtrl'
 			}
@@ -19,22 +20,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('app.favoris', {
 		url: '/favoris',
 		views: {
-			'menuContent': {
+			'tab-favoris': {
 				templateUrl: 'templates/favoris.html',
 				controller: 'FavorisCtrl'
 			}
 		}
 	});
-
-//	$stateProvider.state('app.single', {
-//		url: '/accueil/:playlistId',
-//		views: {
-//			'menuContent': {
-//				templateUrl: 'templates/playlist.html',
-//				controller: 'PlaylistCtrl'
-//			}
-//		}
-//	});
+	
+	$stateProvider.state('app.liste', {
+		url: '/liste',
+		views: {
+			'tab-liste': {
+				templateUrl: 'templates/liste.html',
+				controller: 'ListeCtrl'
+			}
+		}
+	});
   
 	$urlRouterProvider.otherwise('/app/accueil');
 });

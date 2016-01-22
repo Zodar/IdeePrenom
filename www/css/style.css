@@ -1,5 +1,10 @@
 #select_origins, #select_genres, #select_frequences {
-	width: 100%;	
+	width: 100%;
+}
+.prec {
+	margin-top: 2%;
+	vertical-align: medium;
+	height: 50%;
 }
 .the_name {
 	font-family: NunitoBold;
@@ -15,20 +20,20 @@
 	font-weight: bold;
 }
 
-.background_m {
+.background_Garçon {
 	background-color: #89cff0;
 }
 
-.background_f {
+.background_Fille {
 	background-color: #f4c2c2;
 }
 
-.prenom_favoris {
+.prenom_favoris, .prenom_liste {
 	font-size: larger!important;
-	color: white!important;
+	color: darksilver!important;
 }
 
 .label_input {
-	background-color: darkcyan;
+	background-color: cadetblue;
 	color: white;
 }

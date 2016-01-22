@@ -12,3 +12,7 @@ app.run(function($ionicPlatform, $http, $cordovaSQLite, $ionicLoading, $rootScop
 		InitDb.init();
 	});
 });
+
+app.config(function($ionicConfigProvider) {
+	$ionicConfigProvider.tabs.position('bottom');
+});

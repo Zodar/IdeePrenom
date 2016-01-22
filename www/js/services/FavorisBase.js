@@ -1,4 +1,4 @@
-services.factory('FavorisBase', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message) {
+services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ionicLoading, $http, DEV, Message) {
 
 	var self = this;
 	self.callback = null;
@@ -46,14 +46,14 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, $ionicLoadi
 		});
 	}
 	
-	self.getAll = function(callback, prenom) {
+	self.getAll = function(callback) {
 	    var query = "SELECT * FROM Favoris;";
 		
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			var arrayResult = [];
 			var i;
 			for (i = 0; i < res.rows.length; i++) {
-				arrayResult.push(res.rows.item(i));
+				arrayResult.push(Parse.all(res.rows.item(i)));
 			}
 			callback(arrayResult);
 		}, function (err) {

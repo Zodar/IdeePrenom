@@ -6,8 +6,6 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 	});
 	
 	function ads() {
-	    //adbuddiz.setLogLevel(adbuddiz.LogLevel.Info);
-	    //adbuddiz.setTestModeActive();
 		adbuddiz.setLogLevel(adbuddiz.LogLevel.Silent);
 	    adbuddiz.setAndroidPublisherKey("c799bdf4-0c3b-4a5f-b5c3-4ff23b0511d5");
 	    adbuddiz.cacheAds();
@@ -17,7 +15,7 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 	$scope.deleteOne = function(prenom) {
 		var index;
 		$ionicPopup.show({title: 'Suppression',
-			subTitle: 'Voulez vous supprimer ce favori ?',
+			subTitle: 'Voulez vous supprimer ' + prenom.prenom + ' de vos favoris ?',
 			buttons: [{text: '<b>Supprimer</b>', type: 'button-positive',
 				onTap: function(e) {
 					FavorisBase.deleteOne(deleteOneSuccess, prenom);
