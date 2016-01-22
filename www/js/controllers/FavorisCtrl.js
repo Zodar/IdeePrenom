@@ -2,7 +2,17 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 	
 	$scope.$on('$ionicView.enter', function(e) {
 		initPage();
+	    ads();
 	});
+	
+	function ads() {
+	    //adbuddiz.setLogLevel(adbuddiz.LogLevel.Info);
+	    //adbuddiz.setTestModeActive();
+		adbuddiz.setLogLevel(adbuddiz.LogLevel.Silent);
+	    adbuddiz.setAndroidPublisherKey("c799bdf4-0c3b-4a5f-b5c3-4ff23b0511d5");
+	    adbuddiz.cacheAds();
+	    adbuddiz.showAd();
+	}
 	
 	$scope.deleteOne = function(prenom) {
 		var index;

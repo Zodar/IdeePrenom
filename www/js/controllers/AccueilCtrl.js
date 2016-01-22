@@ -1,44 +1,82 @@
 controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
 	
+	$scope.origins = [];
+	$scope.genres = [];
+	$scope.genre = "1";
+	$scope.frequence = "1";
+	$scope.origine = "1";
+	$scope.lettre = {text: ''};
+	
 	$scope.$on('$ionicView.enter', function(e) {
-//		getOrigins();
-		getOriginsSuccess()
+		setOrigins();
+		setGenre();
+		setFrequence();
 	});
 	
-	function getOrigins() {
-		if ($rootScope.finishPopulate) {
-			RandomPrenom.getAllOrigins(getOriginsSuccess);
+	$scope.addToFavoris = function() {
+		FavorisBase.saveOne(favorisAdded, $scope.randomPrenom, true);
+	}
+	
+	function favorisAdded(message) {
+		Message.shortCenter(message);
+	}
+	
+	$scope.again = function() {
+		RandomPrenom.withParams(randomResult,
+			$scope.dataGenres.genres,
+			$scope.dataFrequences.frequences,
+			$scope.dataOrigins.origins,
+			$scope.lettre.text);
+	}
+	
+	function randomResult(res) {
+		if (res == null) {
+			Message.longBottom("Aucun résultat !");
 		} else {
-			setTimeout(getOrigins, 5);
+			$scope.randomPrenom = res;		
 		}
 	}
 	
-	function getOriginsSuccess() {
+	function setGenre() {
+		var genres = [];
+		genres.push({genre: "Garçon", value: "m"});
+		genres.push({genre: "Fille", value: "f"});
+		$scope.genres = genres;
+	}
+	
+	function setFrequence() {
+		var frequences = [];
+		frequences.push({frequence: "Très commun", value: "+1"});
+		frequences.push({frequence: "Peu commun", value: "-1"});
+		$scope.frequences = frequences;		
+	}
+	
+	function setOrigins() {
 		var origins = [];
-		origins.push({origine: "african"});
-		origins.push({origine: "arabic"});
-		origins.push({origine: "biblical"});
-		origins.push({origine: "catalan"});
-		origins.push({origine: "chinese"});
-		origins.push({origine: "danish"});
-		origins.push({origine: "english"});
-		origins.push({origine: "german"});
-		origins.push({origine: "greek"});
-		origins.push({origine: "hungarian"});
-		origins.push({origine: "iranian"});
-		origins.push({origine: "irish"});
-		origins.push({origine: "indian"});
-		origins.push({origine: "italian"});
-		origins.push({origine: "jewish"});
-		origins.push({origine: "finnish"});
-		origins.push({origine: "french"});
-		origins.push({origine: "polish"});
-		origins.push({origine: "portuguese"});
-		origins.push({origine: "romanian"});
-		origins.push({origine: "russian"});
-		origins.push({origine: "spanish"});
-		origins.push({origine: "swedish"});
-		origins.push({origine: "turkish"});
+		origins.push({origine: "African"});
+		origins.push({origine: "Arabic"});
+		origins.push({origine: "Biblical"});
+		origins.push({origine: "Catalan"});
+		origins.push({origine: "Chinese"});
+		origins.push({origine: "Danish"});
+		origins.push({origine: "English"});
+		origins.push({origine: "German"});
+		origins.push({origine: "Greek"});
+		origins.push({origine: "Hungarian"});
+		origins.push({origine: "Iranian"});
+		origins.push({origine: "Irish"});
+		origins.push({origine: "Indian"});
+		origins.push({origine: "Italian"});
+		origins.push({origine: "Jewish"});
+		origins.push({origine: "Finnish"});
+		origins.push({origine: "French"});
+		origins.push({origine: "Polish"});
+		origins.push({origine: "Portuguese"});
+		origins.push({origine: "Romanian"});
+		origins.push({origine: "Russian"});
+		origins.push({origine: "Spanish"});
+		origins.push({origine: "Swedish"});
+		origins.push({origine: "Turkish"});
 		$scope.origins = origins;
 	}
 	
@@ -47,28 +85,15 @@ controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom,
 		multipleSelect: [],
 	};
 	
-	$scope.origins = [];
-	$scope.genre = "1";
-	$scope.frequence = "1";
-	$scope.origine = "1";
-	$scope.lettre = {text: ''};
-	
-	$scope.data = {
-		genre: '1',
-		frequence: '1'
+	$scope.dataGenres = {
+		genres: "1",
+		multipleSelect: [],
 	};
 	
-	$scope.genreList = [
-		{text: "Tout", sexe: "*", value: "1"},
-		{text: "Garçon", sexe: "m", value: "m"},
-		{text: "Fille", sexe: "f", value: "f"}
-	];
-	
-	$scope.frequenceList = [
-		{text: "Tout", value: "1"},
-		{text: "Très commun", value: "+1"},
-		{text: "Peu commun", value: "-1"}
-	];
+	$scope.dataFrequences = {
+		frequences: "1",
+		multipleSelect: [],
+	};
 	
 	$scope.genreChange = function(genre) {
 		$scope.genre = genre.value;
@@ -80,26 +105,6 @@ controllers.controller('AccueilCtrl', function($scope, $rootScope, RandomPrenom,
 	
 	$scope.origineChange = function(origine) {
 		$scope.origine = origine.value;
-	}
-	
-	$scope.addToFavoris = function() {
-		FavorisBase.saveOne(favorisAdded, $scope.randomPrenom, true);
-	}
-	
-	function favorisAdded(message) {
-		Message.shortCenter(message);
-	}
-	
-	$scope.again = function() {
-		RandomPrenom.withParams(randomResult, $scope.genre, $scope.frequence, $scope.dataOrigins.origins, $scope.lettre.text);
-	}
-	
-	function randomResult(res) {
-		if (res == null) {
-			Message.longBottom("Aucun résultat !");
-		} else {
-			$scope.randomPrenom = res;		
-		}
 	}
 	
 });
