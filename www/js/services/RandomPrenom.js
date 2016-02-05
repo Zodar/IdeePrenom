@@ -16,7 +16,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 				callback(arrayResult);
 			}
 		}, function (err) {
-			Message.erreur(err, "RandomPrenom.js l.11");
+			Message.erreur(err);
 		});
 	}
 	
@@ -26,7 +26,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 			var prenom = res.rows.item(0);
 			callback(Parse.all(prenom));
 		}, function (err) {
-			Message.erreur(err, "RandomPrenom.js l.21");
+			Message.erreur(err);
 		});
 	}
 	
@@ -66,7 +66,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 				callback(null);
 			}
 		}, function (err) {
-			Message.erreur(err, "RandomPrenom.js l.58");
+			Message.erreur(err);
 		});
 	}
 	

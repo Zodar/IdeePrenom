@@ -18,7 +18,7 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ion
 			$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 				callback("Favori ajouté !");
 			}, function (err) {
-				Message.erreur(err, "FavorisBase.js l.21");
+				Message.erreur(err);
 			});
 		}
 	}
@@ -28,7 +28,7 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ion
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			callback("Favori supprimé.");
 		}, function (err) {
-			Message.erreur(err, "FavorisBase.js l.31");
+			Message.erreur(err);
 		});
 	}
 	
@@ -42,7 +42,7 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ion
 				callback("Favori déjà ajouté.");
 			}
 		}, function (err) {
-			Message.erreur(err, "FavorisBase.js l.45");
+			Message.erreur(err);
 		});
 	}
 	
@@ -57,9 +57,7 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ion
 			}
 			callback(arrayResult);
 		}, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+			Message.erreur(err);
 		});
 	}
 	

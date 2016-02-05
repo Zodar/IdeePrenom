@@ -13,9 +13,7 @@ services.factory('PrenomBase', function($cordovaSQLite, $rootScope, Parse, $ioni
 			}
 			callback(arrayResult);
 		}, function (err) {
-			if (DEV) {
-				console.error(err);
-			}
+			Message.erreur(err);
 		});
 	}
 	

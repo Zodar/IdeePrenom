@@ -1,8 +1,8 @@
-controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Message, $ionicPopup) {
+controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Message, $ionicPopup, DEV, ADS) {
 	
 	$scope.$on('$ionicView.enter', function(e) {
 		initPage();
-	    ads();
+		ADS.show();
 	});
 	
 	$scope.addToFavoris = function(item) {
@@ -18,13 +18,6 @@ controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Me
 	
 	function favorisAdded(message) {
 		Message.shortCenter(message);
-	}
-	
-	function ads() {
-		adbuddiz.setLogLevel(adbuddiz.LogLevel.Silent);
-	    adbuddiz.setAndroidPublisherKey("c799bdf4-0c3b-4a5f-b5c3-4ff23b0511d5");
-	    adbuddiz.cacheAds();
-	    adbuddiz.showAd();
 	}
 	
 	/**

@@ -1,4 +1,4 @@
-services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message) {
+services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message, $state) {
 
 	var self = this;
 	self.prenoms = null;
@@ -13,7 +13,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 				populateDB();
 				Message.log("Table Nom supprimée");
 			}, function(error) {
-				Message.log("DROP TABLE Nom: " + JSON.stringify(error));
+				Message.erreur(error);
 			});
 		}
 		else {
@@ -35,7 +35,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 	            $rootScope.finishPopulate = true;
 	    	}
         }, function (err) {
-        	Message.erreur(err, "InitDb.js l.38");
+        	Message.erreur(err);
 		});
 	}
 	
@@ -45,7 +45,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			self.prenoms = response.data;
 			initData();
 		}, function error(response) {
-			Message.erreur("getFile() " + JSON.stringify(error));
+			Message.erreur(error);
 		});
 	}
 	
@@ -63,10 +63,10 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			    insertRows();
 			    Message.log("Tables créees");
 			}, function (err) {
-				Message.erreur(err, "InitDb.js l.66");
+				Message.erreur(err);
 			});
 		}, function (err) {
-			Message.erreur(err, "InitDb.js l.69");
+			Message.erreur(err);
 		});
 	}
 	
@@ -89,8 +89,9 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			Message.log("Prenoms enregistrés");
 			$ionicLoading.hide();
 		    $rootScope.finishPopulate = true;
+            $state.go($state.current, {}, {reload: true});
 	    }, function (error) {
-	    	Message.erreur(error, "InitDb.js l.93");
+	    	Message.erreur(error);
 		});
 	}
 	

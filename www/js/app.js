@@ -1,4 +1,4 @@
-app.run(function($ionicPlatform, $http, $cordovaSQLite, $ionicLoading, $rootScope, DEV, InitDb) {
+app.run(function($ionicPlatform, $http, $cordovaSQLite, $ionicLoading, $rootScope, DEV, InitDb, ADS) {
 	$ionicPlatform.ready(function() {
 		if (window.cordova && window.cordova.plugins.Keyboard) {
 			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -8,7 +8,8 @@ app.run(function($ionicPlatform, $http, $cordovaSQLite, $ionicLoading, $rootScop
 		if (window.StatusBar) {
 			StatusBar.styleDefault();
 		}
-		
+
+		ADS.init();
 		InitDb.init();
 	});
 });
