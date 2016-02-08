@@ -89,7 +89,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 			Message.log("Prenoms enregistrés");
 			$ionicLoading.hide();
 		    $rootScope.finishPopulate = true;
-            $state.go($state.current, {}, {reload: true});
+            //$state.go($state.current, {}, {reload: true});
 	    }, function (error) {
 	    	Message.erreur(error);
 		});

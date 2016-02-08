@@ -20,12 +20,16 @@
 	font-weight: bold;
 }
 
+.background_null {
+	background-color: #FFFCDD;
+}
+
 .background_Garçon {
-	background-color: #89cff0;
+	background-color: #dcf7f3;
 }
 
 .background_Fille {
-	background-color: #f4c2c2;
+	background-color: #ffd8d8;
 }
 
 .prenom_favoris, .prenom_liste {

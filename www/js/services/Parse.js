@@ -1,4 +1,4 @@
-services.factory('Parse', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV) {
+services.factory('Parse', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Message) {
 
 	var self = this;
 	self.prenom = null;
@@ -18,7 +18,15 @@ services.factory('Parse', function($cordovaSQLite, $rootScope, $ionicLoading, $h
 	
 	self.genre = function() {
 		self.prenom.sexe = self.prenom.genre;
-		self.prenom.genre = self.prenom.genre == "f" ? "Fille" : "Garçon";
+		if (self.prenom.genre != "Fille" && self.prenom.genre != "Garçon") {
+			if (self.prenom.genre == "f") {
+				self.prenom.genre = "Fille";
+			} else if (self.prenom.genre == "m") {
+				self.prenom.genre = "Garçon";
+			} else {
+				self.prenom.genre = "null";
+			}
+		}
 	}
 	
 	self.origine = function() {

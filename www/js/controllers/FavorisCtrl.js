@@ -9,7 +9,7 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 		var index;
 		$ionicPopup.show({title: 'Suppression',
 			subTitle: 'Voulez vous supprimer ' + prenom.prenom + ' de vos favoris ?',
-			buttons: [{text: '<b>Supprimer</b>', type: 'button-positive',
+			buttons: [{text: '<b>Supprimer</b>', type: 'button-assertive',
 				onTap: function(e) {
 					FavorisBase.deleteOne(function deleteOneSuccess(message) {
 						Message.shortCenter(message);

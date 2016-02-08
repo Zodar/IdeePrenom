@@ -1,7 +1,6 @@
 services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoading, $http, DEV, Parse, Message) {
 
 	var self = this;
-	self.nbPrenoms = 1;
 
 	self.getAllOrigins = function(callback) {
 		$cordovaSQLite.execute($rootScope.db, "SELECT DISTINCT origine FROM Nom;", []).then(function(res) {
@@ -51,7 +50,6 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 			query += "AND frequence < 1 ";
 		}
 		
-		Message.log(query);
 		if (liste) {
 			self.listeWithParams(callback, query);		
 		} else {	
@@ -60,6 +58,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.listeWithParams = function(callback, query) {
+		Message.log(query);
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			var arrayResult = [];
 			var i;
@@ -77,10 +76,12 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.randomWithParams = function(callback, query) {
+		var random = Math.floor(Math.random() * $rootScope.nbPrenoms);
+		query += " AND id = " + random;
+		Message.log(query);
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			if (res.rows.length) {
-				var random = Math.floor(Math.random() * res.rows.length);
-				var prenom = res.rows.item(random);
+				var prenom = res.rows.item(0);
 				callback(Parse.all(prenom));
 			} else {
 				callback(null);

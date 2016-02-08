@@ -7,6 +7,7 @@ services.factory('FavorisBase', function($cordovaSQLite, $rootScope, Parse, $ion
 		if (check == true) {
 			self.checkIfAlreadySaved(callback, prenom);	
 		} else {
+			Message.log(prenom.genre)
 		    var query = "INSERT INTO Favoris (prenom, genre, origine, frequence, sexe) VALUES ";
 		    query += "('" + 
 			prenom.prenom + "', '" +
