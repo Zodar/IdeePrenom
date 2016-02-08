@@ -38,11 +38,11 @@ services.factory('Message', function(DEV, $cordovaToast) {
 	self.erreur = function(erreur) {
 		if (!window.cordova) {
 			alert("Une erreur s'est produite");
-			Message.log(erreur);
+			self.log(erreur);
 		}
 		else {
 			self.shortCenter("Une erreur s'est produite");
-			Message.log(JSON.stringify(erreur));
+			self.log(JSON.stringify(erreur));
 		}
 	}
 	

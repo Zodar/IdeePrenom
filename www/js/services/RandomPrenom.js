@@ -30,7 +30,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 		});
 	}
 	
-	self.withParams = function(callback, genre, frequence, origine, lettre) {
+	self.withParams = function(callback, genre, frequence, origine, lettre, liste) {
 		var query = "SELECT * FROM Nom where 1 ";
 		
 		if (genre != "1") {
@@ -52,8 +52,28 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 		}
 		
 		Message.log(query);
-		
-		self.randomWithParams(callback, query);
+		if (liste) {
+			self.listeWithParams(callback, query);		
+		} else {	
+			self.randomWithParams(callback, query);
+		}	
+	}
+	
+	self.listeWithParams = function(callback, query) {
+		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
+			var arrayResult = [];
+			var i;
+			if (res.rows.length == 0) {
+				callback(null);
+			} else {
+				for (i = 0; i < res.rows.length; i++) {
+					arrayResult.push(Parse.all(res.rows.item(i)));
+				}
+				callback(arrayResult);
+			}
+		}, function (err) {
+			Message.erreur(err);
+		});
 	}
 	
 	self.randomWithParams = function(callback, query) {

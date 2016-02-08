@@ -1,7 +1,7 @@
 controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $ionicPopup, DEV, ADS) {
 	
 	$scope.$on('$ionicView.enter', function(e) {
-		initPage();
+		FavorisBase.getAll(listFavoris);
 		ADS.show();
 	});
 	
@@ -11,29 +11,20 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 			subTitle: 'Voulez vous supprimer ' + prenom.prenom + ' de vos favoris ?',
 			buttons: [{text: '<b>Supprimer</b>', type: 'button-positive',
 				onTap: function(e) {
-					FavorisBase.deleteOne(deleteOneSuccess, prenom);
-					angular.forEach($scope.listFavoris, function(value, key) {
-						if (value.prenom == prenom.prenom) {
-							index = $scope.listFavoris.indexOf(value);
-							if (index > -1) {
-								$scope.listFavoris.splice(index, 1);
-							}
-						} 
-					});
+					FavorisBase.deleteOne(function deleteOneSuccess(message) {
+						Message.shortCenter(message);
+						angular.forEach($scope.listFavoris, function(value, key) {
+							if (value.prenom == prenom.prenom) {
+								index = $scope.listFavoris.indexOf(value);
+								if (index > -1) {
+									$scope.listFavoris.splice(index, 1);
+								}
+							} 
+						});
+					}, prenom);
 				}
 			}, {text: 'Annuler'}]
 		});
-	}
-	
-	function deleteOneSuccess(message) {
-		Message.shortCenter(message);
-	}
-	
-	/**
-	 * Au lancement de la page.
-	 */
-	function initPage() {
-		FavorisBase.getAll(listFavoris);
 	}
 	
 	/**
@@ -42,7 +33,7 @@ controllers.controller('FavorisCtrl', function($scope, FavorisBase, Message, $io
 	function listFavoris(result) {
 		if (!result.length) {
 			$scope.noFavoris = true;
-			Message.longBottom("Aucuns favoris");
+			Message.shortCenter("Aucuns favoris");
 		} else {
 			Message.log("Listage des favoris...");
 			$scope.noFavoris = false;

@@ -1,4 +1,4 @@
-app.run(function($ionicPlatform, $http, $cordovaSQLite, $ionicLoading, $rootScope, DEV, InitDb, ADS) {
+app.run(function($ionicPlatform, InitDb, ADS) {
 	$ionicPlatform.ready(function() {
 		if (window.cordova && window.cordova.plugins.Keyboard) {
 			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);

@@ -1,11 +1,19 @@
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+	
 	<ion-tab title="Accueil" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/app/home">
     	<ion-nav-view name="tab-home"></ion-nav-view>
   	</ion-tab>
+  	
 	<ion-tab title="Favoris" icon-off="ion-ios-heart-outline" icon-on="ion-ios-heart" href="#/app/favoris">
     	<ion-nav-view name="tab-favoris"></ion-nav-view>
   	</ion-tab>
-	<ion-tab title="Liste" icon-off="ion-ios-box-outline" icon-on="ion-ios-box" href="#/app/liste">
+	
+	<ion-tab title="Recherche" icon-off="ion-ios-search" icon-on="ion-ios-search-strong" href="#/app/recherche">
+    	<ion-nav-view name="tab-recherche"></ion-nav-view>
+  	</ion-tab>
+
+	<ion-tab title="Liste" icon-off="ion-ios-box-outline" icon-on="ion-ios-box" href="#/app/liste" hidden="true">
     	<ion-nav-view name="tab-liste"></ion-nav-view>
   	</ion-tab>
+
 </ion-tabs>

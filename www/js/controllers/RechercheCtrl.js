@@ -1,4 +1,4 @@
-controllers.controller('AccueilCtrl', function($scope, $rootScope, NombrePrenom, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
+controllers.controller('RechercheCtrl', function($scope, $state, $rootScope, NombrePrenom, RandomPrenom, FavorisBase, $ionicPopup, $cordovaToast, DEV, Message) {
 	
 	$scope.origins = [];
 	$scope.genres = [];
@@ -11,16 +11,7 @@ controllers.controller('AccueilCtrl', function($scope, $rootScope, NombrePrenom,
 		setOrigins();
 		setGenre();
 		setFrequence();
-		initApp();
 	});
-	
-	function initApp() {
-		if ($rootScope.finishPopulate) {
-			NombrePrenom.getAll(randomPrenom);
-		} else {
-			setTimeout(initApp, 5);
-		}
-	}
 	
 	function randomPrenom() {
 		RandomPrenom.getAll(function randomResult(res) {
@@ -36,13 +27,12 @@ controllers.controller('AccueilCtrl', function($scope, $rootScope, NombrePrenom,
 		Message.shortCenter(message);
 	}
 	
-	$scope.again = function() {
-		var liste = false;
-		RandomPrenom.withParams(randomResult,
-			$scope.dataGenres.genres,
-			$scope.dataFrequences.frequences,
-			$scope.dataOrigins.origins,
-			$scope.lettre.text, liste);
+	$scope.search = function() {
+		$rootScope.request = {genre: $scope.dataGenres.genres,
+								frequence: $scope.dataFrequences.frequences,
+								origine: $scope.dataOrigins.origins,
+								lettre: $scope.lettre.text};
+        $state.go('app.liste', {}, {reload: true});
 	}
 	
 	function randomResult(res) {

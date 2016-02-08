@@ -36,6 +36,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			}
 		}
 	});
+	
+	$stateProvider.state('app.recherche', {
+		url: '/recherche',
+		views: {
+			'tab-recherche': {
+				templateUrl: 'templates/recherche.html',
+				controller: 'RechercheCtrl'
+			}
+		}
+	});
   
 	$urlRouterProvider.otherwise('/app/accueil');
 });

@@ -1,7 +1,13 @@
-controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Message, $ionicPopup, DEV, ADS) {
+controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, FavorisBase, RandomPrenom, Message, $ionicPopup, DEV, ADS) {
 	
 	$scope.$on('$ionicView.enter', function(e) {
-		initPage();
+		var liste = true;
+		$ionicLoading.show({template: "Chargement des prénoms"});
+		RandomPrenom.withParams(listPrenoms,
+				$rootScope.request.genre,
+				$rootScope.request.frequence,
+				$rootScope.request.origine,
+				$rootScope.request.lettre, liste);
 		ADS.show();
 	});
 	
@@ -10,21 +16,12 @@ controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Me
 			title: 'Voulez vous ajouter ' + item.prenom + ' à vos favoris ?',
 			buttons: [{text: '<b>Ajouter</b>', type: 'button-positive',
 				onTap: function(e) {
-					FavorisBase.saveOne(favorisAdded, item, true);
+					FavorisBase.saveOne(function favorisAdded(message) {
+						Message.shortCenter(message);
+					}, item, true);
 				}
 			}, {text: 'Annuler'}]
 		});	
-	}
-	
-	function favorisAdded(message) {
-		Message.shortCenter(message);
-	}
-	
-	/**
-	 * Au lancement de la page.
-	 */
-	function initPage() {
-		PrenomBase.getAll(listPrenoms);
 	}
 	
 	/**
@@ -32,6 +29,10 @@ controllers.controller('ListeCtrl', function($scope, FavorisBase, PrenomBase, Me
 	 */
 	function listPrenoms(result) {
 		$scope.listePrenoms = result;
+		$ionicLoading.hide();
+		if (result == null) {
+			Message.shortCenter("Aucuns résultats");
+		}
 	}
 	
 });

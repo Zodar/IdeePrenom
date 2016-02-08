@@ -1,23 +1,9 @@
-<ion-view view-title="Idée Prénom">
+<ion-view view-title="Recherche">
 	<ion-content>
 		<div class="row">
 			<div class="col col-center">
-								
-				<div class="row">
-		  			<h1 class="background_{{randomPrenom.genre}} col col-offset-10 col-80 the_name"> {{randomPrenom.prenom}}			  			
-  		     	</div>
-		
-				<div class="row">
-		  			<p class="col col-offset-10 col-80 infos_name"> <b>Origine:</b> {{randomPrenom.origine}}, <b>Frequence:</b> {{randomPrenom.frequence}} </p>
-		     	</div>
-		     	
-   				<div class="button-bar">
-		  			<button ng-click="addToFavoris();" class="button button-medium button-energized ion-android-add col col-50"> 
-		  				Favoris <i class="ion-heart"></i>
-		  			</button>
-					<button ng-click="again();" class="button button-medium button-assertive col col-50">
-						Suivant <i class="ion-play"></i>
-					</button>
+		     	<div class="row">
+		     		<h2 id="titre_recherche" class="col col-center col-offset-10 col-80">Définir les paramètres de la recherche</h2>
 		     	</div>
 		     	
 		   		<div class="list">
@@ -62,6 +48,12 @@
 						</div>
 					</div>
 			    </div>
+
+				<div class="row">
+		  			<button ng-click="search();" class="button button-assertive col col-offset-10 col-80">
+						Rechercher <i class="ion-search"></i>
+					</button>
+		     	</div>
 
 	     	</div>
      	</div>
