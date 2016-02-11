@@ -30,7 +30,11 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.withParams = function(callback, genre, frequence, origine, lettre, liste) {
-		var query = "SELECT * FROM Nom where 1 ";
+		if (liste) {
+			var query = "SELECT * FROM Nom WHERE 1 ";
+		} else {
+			var query = " ";	
+		}
 		
 		if (genre != "1") {
 			query += "AND genre = '" + genre + "' ";	
@@ -76,16 +80,23 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.randomWithParams = function(callback, query) {
-		var random = Math.floor(Math.random() * $rootScope.nbPrenoms);
-		query += " AND id = " + random;
-		Message.log(query);
-		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
-			if (res.rows.length) {
-				var prenom = res.rows.item(0);
-				callback(Parse.all(prenom));
-			} else {
-				callback(null);
-			}
+		firstQuery = "SELECT COUNT(*) as nb FROM Nom WHERE 1 " + query;
+		$cordovaSQLite.execute($rootScope.db, firstQuery, []).then(function(res) {
+			Message.log(JSON.stringify(res.rows.item(0)));
+			var nbPrenoms = res.rows.item(0).nb;
+			var random = Math.floor(Math.random() * nbPrenoms);
+			query = "SELECT * FROM Nom WHERE 1 " + query;
+			Message.log(query);
+			$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
+				if (res.rows.length) {
+					var prenom = res.rows.item(random);
+					callback(Parse.all(prenom));
+				} else {
+					callback(null);
+				}
+			}, function (err) {
+				Message.erreur(err);
+			});
 		}, function (err) {
 			Message.erreur(err);
 		});
