@@ -40,7 +40,7 @@ services.factory('InitDb', function($cordovaSQLite, $rootScope, $ionicLoading, $
 	}
 	
 	function getFile() {
-		$http({method: 'GET', url: 'prenoms/prenoms.csv'}).then(function success(response) {
+		$http({method: 'GET', url: 'prenoms/prenomsSansAccents.csv'}).then(function success(response) {
 			Message.log("prenoms.csv récuperé");
 			self.prenoms = response.data;
 			initData();

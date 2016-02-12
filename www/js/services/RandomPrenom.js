@@ -30,11 +30,7 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.withParams = function(callback, genre, frequence, origine, lettre, liste) {
-		if (liste) {
-			var query = "SELECT * FROM Nom WHERE 1 ";
-		} else {
-			var query = " ";	
-		}
+		var query = "SELECT * FROM Nom WHERE 1 ";
 		
 		if (genre != "1") {
 			query += "AND genre = '" + genre + "' ";	
@@ -53,16 +49,16 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 		} else if (frequence != "1") {
 			query += "AND frequence < 1 ";
 		}
-		
-		if (liste) {
-			self.listeWithParams(callback, query);		
-		} else {	
+
+		if (!liste) {
+			query += " ORDER BY RANDOM() LIMIT 1;";
 			self.randomWithParams(callback, query);
-		}	
+		} else {
+			self.listeWithParams(callback, query);
+		}
 	}
 	
 	self.listeWithParams = function(callback, query) {
-		Message.log(query);
 		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
 			var arrayResult = [];
 			var i;
@@ -80,23 +76,13 @@ services.factory('RandomPrenom', function($cordovaSQLite, $rootScope, $ionicLoad
 	}
 	
 	self.randomWithParams = function(callback, query) {
-		firstQuery = "SELECT COUNT(*) as nb FROM Nom WHERE 1 " + query;
-		$cordovaSQLite.execute($rootScope.db, firstQuery, []).then(function(res) {
-			Message.log(JSON.stringify(res.rows.item(0)));
-			var nbPrenoms = res.rows.item(0).nb;
-			var random = Math.floor(Math.random() * nbPrenoms);
-			query = "SELECT * FROM Nom WHERE 1 " + query;
-			Message.log(query);
-			$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
-				if (res.rows.length) {
-					var prenom = res.rows.item(random);
-					callback(Parse.all(prenom));
-				} else {
-					callback(null);
-				}
-			}, function (err) {
-				Message.erreur(err);
-			});
+		$cordovaSQLite.execute($rootScope.db, query, []).then(function(res) {
+			if (res.rows.length) {
+				var prenom = res.rows.item(0);
+				callback(Parse.all(prenom));
+			} else {
+				callback(null);
+			}
 		}, function (err) {
 			Message.erreur(err);
 		});

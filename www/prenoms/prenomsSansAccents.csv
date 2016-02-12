@@ -182,8 +182,7 @@ ahriman;m;near eastern mythology;0
 ahtahkakoop;m;native american;0
 ahura mazda;m;near eastern mythology;0
 ahuva;f;jewish;0
-ai (1);f;japanese;0
-ai (2);f;chinese;0
+ai;f;chinese, japanese;0
 aias;m;greek mythology;0
 aida;f;english;3.95
 aidan;m,f;irish, scottish;0
@@ -317,8 +316,7 @@ alexei;m;russian;0
 alexej;m;czech;0
 alexia;f;english, german;0
 alexina;f;english;0
-alexis (1);m;german, french, english, ancient greek;0
-alexis (2);f;english;0
+alexis;m, f;german, french, english, ancient greek;0
 alexius;m;ancient greek (latinized);0
 alexus;f;english;0
 alf;m;english;0.03
@@ -482,8 +480,7 @@ amin;m;arabic;0.10
 amina;f;arabic;0
 aminda;f;esperanto;0
 aminta;f;;0.03
-amir (1);m;arabic;0
-amir (2);m;jewish;0
+amir;m;arabic, jewish;0
 amira;f;arabic;0
 amita;f;indian;0
 amittai;m;biblical;0
@@ -507,8 +504,7 @@ anahita;f;near eastern mythology;0
 anaitis;f;near eastern mythology (hellenized);0
 anakin;m;literature;0
 anakoni;m;hawaiian;0
-anan (1);m,f;african;0
-anan (2);m;biblical;0
+anan;m,f;african, biblical;0
 anand;m;indian;0
 ananda;f;indian;0.03
 anani;m;biblical;0
@@ -528,8 +524,7 @@ anastasio;m;italian;0
 anastasios;m;greek, ancient greek;0
 anastasius;m;ancient greek (latinized);0
 anat;f;near eastern mythology;0.03
-anath (1);m;biblical;0
-anath (2);f;near eastern mythology;0
+anath;m, f;biblical, near eastern mythology;0
 anatole;m;french;5.22
 anatoli;m;russian;0
 anatolius;m;ancient greek (latinized);0
@@ -546,8 +541,7 @@ andor;m;norwegian;0
 andra;f;english;0
 andras;m;welsh;0
 andraste;f;celtic mythology;0
-andrea (1);m;italian;0
-andrea (2);f;english, german, czech, slovak, hungarian, scandinavian;0
+andrea;m, f;italian, english, german, czech, slovak, hungarian, scandinavian;0
 andreas;m;german, greek, scandinavian, ancient greek;0.25
 andreea;f;romanian;0
 andrei;m;russian, bulgarian, romanian;0.16
@@ -598,8 +592,7 @@ anicetus;m;ancient greek (latinized);0
 aniela;f;polish;0.76
 anika;f;;0
 aniketos;m;greek, ancient greek;0
-anima (1);f;indian;0
-anima (2);f;english;0
+anima;f;indian, english;0
 aniruddha;m;indian;0
 anisa;f;arabic;0
 anise;f;english;0
@@ -751,8 +744,7 @@ arevig;f;armenian;0
 argus;m;greek mythology (latinized);0.61
 argyris;m;greek;0
 argyros;m;ancient greek;0
-ari (1);m;jewish;0
-ari (2);m;ancient scandinavian;0
+ari;m;jewish, ancient scandinavian;0
 aria;f;english;0.45
 ariadne;f;greek mythology, english;0.06
 ariana;f;english;0.06
@@ -805,8 +797,7 @@ arnau;m;catalan;0
 arnaud;m;french;9.24
 arnaude;f;french;0.67
 arndt;m;german;0.03
-arne (1);m;scandinavian;0
-arne (2);m;german;0
+arne;m;scandinavian, german;0
 arnie;m;english;0
 arnold;m;english, german;1.24
 aroha;f;maori;0
@@ -908,12 +899,10 @@ aubrey;m,f;english;0.06
 aude;f;french;6.31
 audie;f;english;0
 audley;m;english;0
-audra (1);f;lithuanian;0
-audra (2);f;english;0
+audra;f;lithuanian, english;0
 audrea;f;english;0
 audrey;f;english;0.16
-august (1);m;german, polish;0
-august (2);m;english;0
+august;m;german, polish, english;0
 augusta;f;english, italian, polish;0.22
 auguste;m;french;20.36
 augustijn;m;dutch;0
@@ -941,8 +930,7 @@ austen;m;english;0.13
 austin;m;english;0.32
 austyn;m,f;english (modern);0
 autumn;m,f;english;0.03
-ava (1);f;english;0
-ava (2);f;iranian;0
+ava;f;english, iranian;0
 avalon;f;english;0.03
 avdotya;f;russian;0
 avedis;m;armenian;0
@@ -977,9 +965,7 @@ aydin;m;turkish;0
 ayelet;f;jewish;0
 ayesha;f;arabic;0
 ayishah;f;arabic;0
-ayla (1);f;jewish;0
-ayla (2);f;turkish;0
-ayla (3);f;literature;0
+ayla;f;jewish, turkish, literature;0
 aylmer;m;;0
 ayn;f;russian;0
 ayo;f;african;0
@@ -1041,8 +1027,7 @@ balthazar;m;judeo-christian legend;0.64
 bambi;f;english;0.25
 bandi;m;hungarian;0.13
 banu;f;turkish;0
-bao (1);m,f;chinese;0
-bao (2);m;vietnamese;0
+bao;m,f;chinese, vietnamese;0
 baptist;m;german, english;0
 baptiste;m;french;4.81
 baqir;m;arabic;0
@@ -1082,8 +1067,7 @@ basant;m;indian;1.31
 basemath;f;biblical;0
 bashe;f;jewish;0
 bashemath;f;biblical (variant);0
-basia (1);f;polish;0
-basia (2);f;jewish;0
+basia;f;polish, jewish;0
 basil;m;english;0.35
 basile;m;french;1.02
 basilio;m;italian, spanish;0
@@ -1213,8 +1197,7 @@ bernice;f;english, biblical;0
 bernie;m;english;0
 berniece;f;english;0
 bernt;m;scandinavian;0
-berry (1);m;english;0
-berry (2);f;english;0
+berry;m,f;english;0
 bert;m;english, dutch;1.27
 berta;f;polish, czech, hungarian, german, spanish;0.03
 bertalan;m;hungarian;0
@@ -1242,8 +1225,7 @@ betrys;f;welsh;0
 betsy;f;english;0
 bette;f;english;0.25
 bettie;f;english;0
-bettina (1);f;english;0
-bettina (2);f;italian;0
+bettina;f;english, italian;0
 bettino;m;italian;0
 betty;f;english;13.63
 bettye;f;english (modern);0
@@ -1305,8 +1287,7 @@ blondie;f;english;0.25
 blossom;f;english;0.03
 bluma;f;jewish;0
 blythe;m;english;0
-bo (1);m;swedish, danish;0
-bo (2);m;chinese;0
+bo;m;swedish, danish, chinese;0
 boadicea;f;ancient celtic (latinized);0
 boaz;m;biblical, jewish;0
 bob;m;english;7.10
@@ -1371,8 +1352,7 @@ braiden;m;english, irish;0
 braidy;m,f;english, irish;0
 braith;f,m;welsh;0
 bram;m;english, dutch;0.35
-bran (1);m;irish, irish mythology;0
-bran (2);m;welsh, welsh mythology;0
+bran;m;irish, irish mythology, welsh, welsh mythology;0
 brand;m;english;0.06
 branda;f;english;0
 brande;f;english;0.06
@@ -1547,8 +1527,7 @@ callias;m;ancient greek (latinized);0
 callie;f;english;0
 calliope;f;greek mythology (latinized);0.13
 callista;f;english;0
-callisto (1);m;italian;0
-callisto (2);f;roman mythology;0
+callisto;m,f;italian, roman mythology;0
 callistus;m;late roman;0
 callum;m;scottish;0.13
 calogera;f;italian;0
@@ -2199,10 +2178,8 @@ damien;m;french;4.01
 damion;m;english;0
 damodar;m;indian;0.03
 damon;m;greek mythology, english;0.03
-dan (1);m;biblical;0
-dan (2);m;english, romanian;0
-dana (1);f;polish, czech, romanian;0
-dana (2);m,f;english;0
+dan;m;biblical, english, romanian;0
+dana;m,f;polish, czech, romanian, english;0
 danail;m;bulgarian;0
 dand;m;scottish;0
 dane;m;english;0.03
@@ -2225,9 +2202,7 @@ danut;m;romanian;0
 danuta;f;polish;0
 danya;f;;0
 daphne;f;greek mythology, english;0
-dara (1);m;irish;0
-dara (2);f;jewish;0
-dara (3);f,m;khmer;0
+dara;m,f;irish, jewish, khmer;0
 darach;m;irish;0
 darby;m,f;english;0.10
 darcey;f;english;0.06
@@ -2343,8 +2318,7 @@ delwyn;m,f;welsh;0
 delyth;f;welsh;0
 dema;f;arabic;0
 demelza;f;english;0
-demeter (1);f;greek mythology;0
-demeter (2);m;hungarian;0
+demeter;f;greek mythology, hungarian;0
 demetria;f;ancient greek;0
 demetrio;m;italian, spanish, portuguese;0
 demetrios;m;greek, ancient greek;0.03
@@ -2459,8 +2433,7 @@ dilshad;m;;0
 dilwen;f;welsh;0
 dilwyn;m;welsh;0
 dilys;f;welsh;0
-dima (1);f;arabic;0
-dima (2);m;russian;0
+dima;f;arabic, russian;0
 dimitar;m;bulgarian, serbian;0
 dimitri;m;russian, french;1.15
 dina;f;english;0.13
@@ -2703,8 +2676,7 @@ edmonda;f;;0
 edmondo;m;italian;0
 edmund;m;english, german;0.89
 edmundo;m;spanish, portuguese;0.06
-edna (1);f;irish, scottish;0
-edna (2);f;biblical;0
+edna;f;irish, scottish, biblical;0
 edoardo;m;italian;0
 edom;m;biblical;0
 edric;m;english;0
@@ -2841,8 +2813,7 @@ eliseo;m;italian, spanish;0
 elisha;m;biblical;0.06
 elisheba;f;biblical;0
 elisheva;f;jewish;0
-elissa (1);f;roman mythology;0
-elissa (2);f;english;0
+elissa;f;roman mythology, english;0
 elisud;m;welsh;0
 elita;f;;0
 eliud;m;biblical;0
@@ -2853,20 +2824,17 @@ elizabeth;f;english, biblical;0.45
 elizaveta;f;russian;0
 elkan;m;jewish;0
 elkanah;m;biblical;0
-elke (1);f;dutch, frisian;0
-elke (2);f;jewish;0
+elke;f;dutch, frisian, jewish;0
 ella;f;english;0.06
 ellar;m;scottish;0
 elle;f;english;4870.31
 ellen;f;english;0.41
 ellery;m,f;english;0.06
-elli (1);f;german;0
-elli (2);f;finnish;0
+elli;f;german, finnish;0
 ellie;f;english;0
 elliot;m;english;0.19
 elliott;m;english;0.19
-ellis (1);m;english;0
-ellis (2);m;welsh;0
+ellis;m;english, welsh;0
 elly;f;english;0
 elma;f;;0
 elmas;f;turkish;0
@@ -3139,8 +3107,7 @@ evadne;f;greek mythology;0
 evaline;f;english;0
 evalyn;f;english;0
 evan;m;welsh, english;0
-evander (1);m;greek mythology (latinized), roman mythology;0
-evander (2);m;scottish, english;0
+evander;m;greek mythology (latinized), roman mythology, scottish, english;0
 evangelina;f;english, bulgarian;0
 evangeline;f;english;0.06
 evangelos;m;greek;0
@@ -3550,8 +3517,7 @@ gabir;m;arabic;0
 gabr;m;arabic;0
 gabriel;m;english, french, german, spanish, portuguese, romanian, biblical;25.20
 gabriela;f;portuguese, romanian;0
-gabriele (1);m;italian;0
-gabriele (2);f;german;0
+gabriele;m,f;italian, german;0
 gabriella;f;italian, hungarian;1.24
 gabrielle;f;french, english;17.87
 gad;m;biblical;0
@@ -3770,9 +3736,7 @@ giffard;m;english;0.22
 gigi;f;french;0.10
 gijs;m;dutch;0
 gijsbert;m;dutch;0
-gil (1);m;spanish, portuguese;0
-gil (2);m;english;0
-gil (3);m;jewish;0
+gil;m;spanish, portuguese, english, jewish;0
 gilad;m;jewish, biblical;0
 gilah;f;jewish;0
 gilbert;m;english, french, dutch;24.28
@@ -3789,8 +3753,7 @@ gillespie;m;scottish;0
 gillian;f;english;0
 gillis;m;dutch;0
 gilroy;m;irish, scottish;0
-gina (1);f;italian, english;0
-gina (2);f;japanese;0
+gina;f;italian, english, japanese;0
 ginette;f;english;2.45
 ginevra;f;italian;0.06
 ginger;f;english;0.10
@@ -4017,8 +3980,7 @@ gunter;m;german;0
 gunther;m;german;0.06
 guntram;m;german;0.03
 gunvor;f;scandinavian;0
-gus (1);m;english, scottish;0
-gus (2);m;greek;0
+gus;m;english, scottish, greek;0
 gussie;f;english;0
 gusta;f;;0
 gustaf;m;swedish;0.10
@@ -4231,8 +4193,7 @@ heather;f;english;0
 heaven;f;english;0
 hebe;f;greek mythology;0
 hebel;m;jewish;0
-heber (1);m;irish;0
-heber (2);m;biblical;0
+heber;m;irish, biblical;0
 hecate;f;greek mythology (latinized);0
 heck;m;scottish;0.10
 heckie;m;scottish;0
@@ -4458,8 +4419,7 @@ hugh;m;english;0.38
 hughie;m;english;0
 hugo;m;spanish, portuguese, english, dutch, german;12.65
 hugues;m;french;0.96
-hulda (1);f;scandinavian, german;0
-hulda (2);f;biblical (variant);0
+hulda;f;scandinavian, german, biblical (variant);0
 huldah;f;biblical;0
 humbert;m;english, german, french;0.83
 humphrey;m;english;1.47
@@ -4847,8 +4807,7 @@ jahzeel;m;biblical;0
 jai;m;indian;0.06
 jaiden;m,f;english (modern);0
 jaidev;m;indian;0
-jaime (1);m;spanish, portuguese;0
-jaime (2);f;english;0
+jaime;m,f;spanish, portuguese, english;0
 jair;m;biblical;0
 jairus;m;biblical;0
 jaka;m;slovene;0
@@ -4873,8 +4832,7 @@ james;m;english, biblical;6.98
 jamesina;f;scottish;0
 jamey;m;english;0
 jami;f;english;4.78
-jamie (1);m;scottish, english;0
-jamie (2);f;english;0
+jamie;m,f;scottish, english;0
 jamil;m;arabic;0
 jamila;f;arabic;0
 jamin;m;biblical;0.03
@@ -4882,8 +4840,7 @@ jamison;m;english;0
 jamshad;m;iranian;0
 jamshed;m;iranian;0
 jamsheed;m;iranian;0
-jan (1);m;dutch, scandinavian, czech, polish, german;0
-jan (2);f;english;0
+jan;;dutch, scandinavian, czech, polish, german, english;0
 jana;f;dutch, czech, polish;0
 janae;f;english;0
 janan;f;arabic;0
@@ -4910,12 +4867,10 @@ janie;f;english;0.48
 janika;m;hungarian;0
 janina;f;polish, english;0.03
 janine;f;english;2.93
-janis (1);m;latvian;0
-janis (2);f;english;0
+janis;m,f;latvian, english;0
 janna;f;english;0.03
 jannah;f;english;0
-janne (1);m;swedish;0
-janne (2);f;danish, norwegian;0
+janne;m,f;danish, norwegian, swedish;0
 janneke;f;dutch;0
 jannick;m;danish;0
 jannike;f;scandinavian;0
@@ -4965,8 +4920,7 @@ javor;m;croatian, serbian, slovene;0
 jawahir;f;arabic;0
 jawdat;m;arabic;0
 jaxon;m;english (modern);0
-jay (1);m;english;0
-jay (2);m;indian;0
+jay;m;english, indian;0
 jaya;f;indian;0
 jayant;m;indian;0
 jayanti;f;indian;0
@@ -4992,8 +4946,7 @@ jayson;m;english (modern);0
 jaywant;m;indian;0
 jazmin;f;english;0
 jazmine;f;english;0
-jean (1);m;french;0
-jean (2);f;english;0
+jean;m,f;french, english;0
 jeana;f;english;0
 jean-baptiste;m;french;0
 jeane;f;english;0
@@ -5086,8 +5039,7 @@ jesse;m;english, biblical;0
 jessenia;f;arabic;0
 jessi;f;english;0
 jessica;f;english;8.79
-jessie (1);f;scottish;0
-jessie (2);f,m;english;0
+jessie;f,m;scottish, english;0
 jessika;f;english (modern);0
 jessye;f;english (modern);0
 jesus;m;theology, biblical;0.51
@@ -5124,8 +5076,7 @@ jo;m,f;english;18.25
 joab;m;biblical;0
 joachim;m;english, french, german, polish, biblical;0.67
 joakim;m;scandinavian;0
-joan (1);f;english;0
-joan (2);m;catalan;0
+joan;m,f;english,catalan;0
 joana;f;portuguese;0
 joandra;f;english (modern);0
 joann;f;english;0
@@ -5194,8 +5145,7 @@ jonathan;m;english, biblical;0.57
 jonathon;m;english;0
 jonelle;f;english;0
 jonette;f;norwegian, english;0
-joni (1);f;english;0
-joni (2);m;finnish;0
+joni;m,f;english, finnish;0
 jonie;f;english;0
 jonna;f;danish, swedish;0
 jonny;m;english (modern);0
@@ -5289,8 +5239,7 @@ juhana;m;finnish;0
 juhani;m;finnish;0
 juho;m;finnish;0
 jukka;m;finnish;0
-jules (1);m;french;0
-jules (2);f;english;0
+jules;m;french, english;0
 juli;f;hungarian;0
 julia;f;english, german, spanish, portuguese, ancient roman, biblical;4.59
 julian;m;english;0.19
@@ -5362,8 +5311,7 @@ kaelea;f;english (modern);0
 kaelee;f;english (modern);0
 kaety;f;english;0
 kagiso;f;african;0
-kai (1);m;scandinavian, finnish, german;0
-kai (2);m,f;hawaiian;0
+kai;m,f;hawaiian, scandinavian, finnish, german;0
 kaia;f;norwegian;0
 kaija;f;finnish;0
 kaila;f;;0.03
@@ -5405,13 +5353,11 @@ kalypso;f;greek mythology;0
 kalysta;f;english (modern);0
 kam;m;english;1.62
 kama;m;hindu mythology;0.19
-kamal (1);m;arabic;0
-kamal (2);m;indian;0
+kamal;m;arabic, indian;0
 kamala;f;indian;0
 kamaria;f;african;0
 kameron;m;english (modern);0
-kamil (1);m;arabic;0
-kamil (2);m;czech, slovak, polish;0
+kamil;m;arabic, czech, slovak, polish;0
 kamila;f;czech, slovak, polish;0
 kamilla;f;hungarian;0
 kamryn;f;english;0
@@ -5436,8 +5382,7 @@ karen;f;danish, norwegian, english;0.19
 karena;f;;0
 karenza;f;english;0
 karesinda;f;esperanto;0
-kari (1);f;norwegian;0
-kari (2);m;finnish;0
+kari;f;norwegian, finnish;0
 karim;m;arabic;0.06
 karima;f;arabic;0
 karin;f;swedish, finnish;0.03
@@ -5523,8 +5468,7 @@ katya;f;russian;0
 kausalya;f;indian;0
 kaveri;f;indian;0
 kawacatoose;m;native american;0
-kay (1);f;english;0
-kay (2);m;welsh mythology;0
+kay;m,f;welsh mythology, english;0
 kaycee;f;english (modern);0
 kaye;f;english;0.03
 kayetan;m;german;0
@@ -5590,8 +5534,7 @@ kelsi;f;english (modern);0
 kelsie;f;english;0
 kelvin;m;english;0.67
 kemp;m;english;0.13
-ken (1);m;english;0
-ken (2);m;japanese;0
+ken;m;english,japanese;0
 kenan;m;biblical;0
 kenaniah;m;biblical;0
 kendal;m;english, welsh;0
@@ -5689,9 +5632,7 @@ kiley;f;english;0
 kilian;m;irish;0.13
 kilie;f;english;0
 killian;m;irish;0.06
-kim (1);f;english;0
-kim (2);m;scandinavian;0
-kim (3);f;vietnamese;0
+kim;f;english, scandinavian, vietnamese;0
 kimball;m;english;0
 kimberlee;f;english (modern);0
 kimberleigh;f;english (modern);0
@@ -5815,8 +5756,7 @@ kristal;f;english (modern);0
 kristaps;m;latvian;0
 kristeen;f;english;0
 kristel;f;english (modern);0
-kristen (1);m;danish;0
-kristen (2);f;german;0
+kristen;m,f;danish, german;0
 krister;m;swedish;0
 kristi;f;english;0
 kristia;f;english;0
@@ -5986,8 +5926,7 @@ laurel;f;english;0.67
 laurelle;f;english;0.10
 lauren;f;english;0.16
 laurena;f;english;0
-laurence (1);m;english;0
-laurence (2);f;french;0
+laurence;m,f;english, french;0
 laurencia;f;english;0
 laurene;f;english;0
 laurens;m;dutch;0.54
@@ -6107,8 +6046,7 @@ leonard;m;english;0.54
 leonardo;m;italian, spanish, portuguese;0.06
 léonce;m;french;0.16
 leoncio;m;spanish;0
-leone (1);m;italian;0
-leone (2);f;english;0
+leone;m;italian, english;0
 leonhard;m;german;0.06
 leonid;m;russian;0.22
 leonidas;m;greek, ancient greek;0.10
@@ -6219,8 +6157,7 @@ lilo;f;german;0
 lily;f;english;2.04
 lim;m,f;chinese;0
 lin;m,f;chinese;4.62
-lina (1);f;arabic;0
-lina (2);f;english, italian;0
+lina;f;english, italian, arabic;0
 linas;m;lithuanian;0
 lincoln;m;english;0.41
 linda;f;english;1.56
@@ -6262,8 +6199,7 @@ lisha;f;english;0
 lissa;f;english;0.54
 lita;f;english;0
 liv;f;scandinavian;8.86
-livia (1);f;italian, portuguese, english, ancient roman;0
-livia (2);f;english;0
+livia;f;italian, portuguese, english, ancient roman;0
 liviana;f;italian, ancient roman;0
 livio;m;italian;0
 liviu;m;romanian;0
@@ -6380,8 +6316,7 @@ lubna;f;arabic;0
 lubomierz;m;polish;0
 lubomir;m;czech, slovak;0
 luc;m;french;20.80
-luca (1);m;italian;0
-luca (2);f;hungarian;0
+luca;m,f;italian, hungarian;0
 lucas;m;english, dutch, french;1.69
 lucasta;f;english;0
 luce;f;french;1.88
@@ -6586,8 +6521,7 @@ mahomet;m;arabic;2.04
 mahon;m;irish;1.37
 mahvash;f;iranian;0
 mai;f;vietnamese;39.44
-maia (1);f;greek mythology, roman mythology;0
-maia (2);f;roman mythology;0
+maia;f;greek mythology, roman mythology;0
 maighread;f;scottish;0
 maija;f;finnish;0
 maike;f;frisian, german, dutch;0
@@ -6673,8 +6607,7 @@ manus;m;irish;0.16
 manya;f;russian;0
 maoilios;m;scottish;0
 maquinna;m;native american;0
-mara (1);f;biblical;0
-mara (2);f;hungarian;0
+mara;f;biblical,hungarian;0
 marajha;f;esperanto;0
 maral;f;armenian;0.03
 maralyn;f;english (modern);0
@@ -6738,14 +6671,11 @@ mariabella;f;english;0
 mariah;f;english;0
 mariam;f;arabic;0.06
 mariamne;f;;0
-marian (1);f;english;0
-marian (2);m;polish, romanian;0
-marian (3);m;;0
+marian;m,f;english, polish, romanian;0
 mariana;f;italian, spanish, portuguese, romanian, ancient roman;0.06
 mariangela;f;italian;0
 marianna;f;english, hungarian;0.06
-marianne (1);f;french;0
-marianne (2);f;english;0
+marianne;f;french,english;0
 mariano;m;italian;0.38
 marianus;m;ancient roman;0
 maribel;f;spanish;0
@@ -6779,8 +6709,7 @@ marine;f;french;40.49
 marino;m;italian;8.41
 marinus;m;ancient roman;0.03
 mario;m;italian, spanish, portuguese;3.06
-marion (1);f;english;0
-marion (2);m;english;0
+marion ;f;english, english;0
 maris;f;english;4.05
 marisa;f;italian, spanish, english;0
 marise;f;french;0.03
@@ -6821,8 +6750,7 @@ marlyn;f;english;0
 marmaduke;m;english;0
 marna;f;swedish;0
 marni;f;jewish;0
-marnie (1);f;english;0
-marnie (2);f;jewish;0
+marnie;f;english,jewish;0
 marquis;m;english;7.10
 marquise;m;english;5.77
 marquita;f;;0
@@ -6912,8 +6840,7 @@ maud;f;english;1.56
 maude;f;english;0
 maudie;f;english;0
 mauno;m;finnish;0
-maura (1);f;italian, spanish;0
-maura (2);f;scottish, irish, english;0
+maura;f;italian, spanish, scottish, irish, english;0
 maureen;f;irish, english;0.45
 maurene;f;irish, english;0
 mauri;m;finnish;0.13
@@ -6943,8 +6870,7 @@ maximus;m;ancient roman;0.19
 maxine;f;english;0
 maxwell;m;english;5.96
 may;f;english;1.34
-maya (1);f;indian;0
-maya (2);f;english;0
+maya;f;indian, english;0
 maybelle;f;english;0
 maybelline;f;english;0
 mayim;f;;0
@@ -7004,12 +6930,10 @@ melchior;m;judeo-christian legend;0.73
 melchiorre;m;italian;0
 melchor;m;spanish;0
 mele;f;hawaiian;0.03
-melek (1);m;jewish;0
-melek (2);f;turkish;0
+melek;m,f;turkish, jewish;0
 melesina;f;;0
 melete;f;greek mythology;0
-melia (1);f;english;0
-melia (2);f;greek mythology;0
+melia;f;greek mythology, english;0
 melicent;f;english;0
 melina;f;;0.10
 melinda;f;english;0
@@ -7091,8 +7015,7 @@ micaiah;m,f;biblical;0
 micajah;m;biblical (variant);0
 michael;m;english, german, czech, biblical;0.67
 michaela;f;english, german, czech;0
-michal (1);m;polish, czech;0
-michal (2);f;biblical, jewish;0
+michal;m;polish, czech, biblical, jewish;0
 michalina;f;polish;0
 michayla;f;english (modern);0
 micheal;m;english;0
@@ -7258,9 +7181,7 @@ mojisola;f;african;0
 mokosh;f;slavic mythology;0
 mollie;f;english;0
 molly;f;english;1.08
-mona (1);f;irish, english;0
-mona (2);f;scandinavian;0
-mona (3);f;arabic;0
+mona;f;irish, english, scandinavian, arabic;0
 monat;f;irish;0
 monday;f;english;0.03
 monet;m;;1.24
@@ -7391,16 +7312,14 @@ nada;f;arabic;0.22
 nadejda;f;russian, bulgarian;0.10
 nader;m;arabic;0.03
 nadezhda;f;russian, czech, slovak, slovene;0
-nadia (1);f;french, english;0
-nadia (2);f;arabic;0
+nadia;f;french, english, arabic;0
 nadim;m;arabic;0
 nadine;f;french;21.19
 nadir;m;arabic;0.29
 nadira;f;arabic;0
 nadja;f;german, slovene;0.29
 nadra;f;arabic;0
-nadya (1);f;russian;0
-nadya (2);f;arabic;0
+nadya;f;russian, arabic;0
 nadzeija;f;polish;0
 nagendra;m;indian;0
 nagi;m;arabic;0
@@ -7436,8 +7355,7 @@ nanuk;m;;0
 naoise;m;irish, scottish, irish mythology;0
 naoko;f;japanese;0
 naomh;f;irish;0
-naomi (1);f;english, jewish, biblical;0
-naomi (2);f;japanese;0
+naomi;f;english, jewish, biblical, japanese;0
 naphtali;m;biblical;0
 napier;m;english;0.16
 napoleon;m;history;0.03
@@ -7512,8 +7430,7 @@ nelson;m;english;1.82
 nelu;m;romanian;0
 nemesis;f;greek mythology;0.03
 nena;f;english;0
-neo (1);f,m;african;0
-neo (2);m;english;0
+neo;f,m;english, african;0
 neoptolemus;m;greek mythology (latinized);0
 nephele;f;greek mythology;0
 neptune;m;roman mythology;2.07
@@ -7526,12 +7443,9 @@ nerida;f;;0
 nerina;f;italian;0
 nerio;m;italian;0
 nerissa;f;english;0
-nero (1);m;ancient roman;0
-nero (2);m;italian;0
+nero;m;ancient roman, italian;0
 nerys;f;welsh;0
-nessa (1);f;english;0
-nessa (2);f;jewish;0
-nessa (3);f;irish;0
+nessa;f;english, irish, jewish;0
 nesta;f;welsh;0.03
 nestor;m;greek mythology;4.21
 nestore;m;italian;0
@@ -7560,8 +7474,7 @@ ngozi;m,f;african;0
 nguyen;m;vietnamese;0.06
 nguyet;f;vietnamese;0
 nhung;f,m;vietnamese;0
-nia (1);f;welsh;0
-nia (2);f;african;0
+nia;f;welsh, african;0
 niall;m;irish, scottish;0
 niamh;f;irish, irish mythology;0
 nibori;m;japanese;0
@@ -7578,8 +7491,7 @@ nico;m;italian;0.41
 nicodemo;m;italian, spanish, portuguese;0
 nicodemus;m;biblical, english;0
 nicol;m;scottish;0.54
-nicola (1);m;italian;0
-nicola (2);f;english;0
+nicola;m,f;italian,english;0
 nicolae;m;romanian;0.03
 nicolao;m;spanish;0
 nicolaos;m;greek;0.03
@@ -7595,8 +7507,7 @@ nicomedo;m;italian;0
 nicostrato;m;italian;0
 nicu;m;romanian;0
 nicusor;m;romanian;0
-niels (1);m;danish;0
-niels (2);m;dutch;0
+niels;m;danish, dutch;0
 nieve;f;spanish;0.03
 nieves;f;spanish;0
 nigel;m;english;0.10
@@ -7637,8 +7548,7 @@ nilofer;f;iranian;0
 niloofar;f;iranian;0
 nils;m;swedish, norwegian;0.67
 nimbus;m;english;0.45
-nina (1);f;russian, english, german, french;0
-nina (2);f;near eastern mythology;0
+nina;f;russian, english, german, french, near eastern mythology;0
 ninel;f;russian;0
 ninette;f;french;0.16
 ning;f,m;chinese;0.16
@@ -7661,8 +7571,7 @@ nkruma;m,f;african;0
 nnamdi;m;african;0
 noa;f;biblical (variant);0.06
 noach;m;jewish;0.03
-noah (1);m;english, biblical;0
-noah (2);f;biblical;0
+noah;m,f;english, biblical;0
 noak;m;swedish;0
 noam;m;jewish;0.06
 noble;m;english;19.21
@@ -7932,12 +7841,10 @@ oved;m;jewish;0
 ovid;m;history;0
 ovidiu;m;romanian;0
 owain;m;welsh, welsh mythology;0
-owen (1);m;welsh;0
-owen (2);m;irish;0
+owen;m;welsh, irish;0
 owena;f;welsh;0
 oxana;f;ukrainian, russian;0
-oz (1);m;english;0
-oz (2);m;jewish;0
+oz;m;english, jewish;0
 ozan;m;turkish;0
 ozanne;f,m;french;0
 ozzie;m;english;0
@@ -8470,8 +8377,7 @@ raine;f;english;0.10
 rainer;m;german;0.19
 rainerio;m;spanish;0
 rainier;m;french;0.45
-raisa (1);f;russian;0
-raisa (2);f;jewish;0
+raisa;f;russian, jewish;0
 raisel;f;jewish;0
 raj;m;indian;0
 raja;f;arabic;0.22
@@ -8560,8 +8466,7 @@ raymond;m;english, french;18.76
 raymonde;f;french;1.15
 raymund;m;english;0
 raymundo;m;spanish, portuguese;0
-rayna (1);f;english;0
-rayna (2);f;jewish;0
+rayna;f;english, jewish;0
 raynard;m;english;0
 rayner;m;english;0.03
 raza;m;arabic;0
@@ -8609,8 +8514,7 @@ reid;m;english, scottish;0.35
 reijo;m;finnish;0
 reimund;m;german;0
 rein;m;german;2.20
-reina (1);f;spanish, english;0
-reina (2);f;jewish;0
+reina;f;spanish, english, jewish;0
 reinaldo;m;portuguese, spanish;0.03
 reine;f;french;36.80
 reiner;m;german;0
@@ -8762,11 +8666,9 @@ roeland;m;dutch;0
 rogelio;m;spanish;0
 roger;m;english, french;49.73
 rogerio;m;portuguese;0
-rohan (1);m;indian;0
-rohan (2);f;literature;0
+rohan;m,f;indian, literature;0
 rohesia;m;;0
-roi (1);m;galician;0
-roi (2);m;jewish;0
+roi;m;galician, jewish;0
 roibeard;m;irish;0
 roksana;f;russian;0
 rokuro;m;japanese;0
@@ -8796,8 +8698,7 @@ romola;f;italian;0
 romolo;m;italian;0
 romulus;m;roman mythology;0.45
 romy;f;german, english;0.13
-ron (1);m,f;english;0
-ron (2);m,f;jewish;0
+ron;m,f;english, jewish;0
 rona;f;english;0
 ronald;m;scottish, english;0.29
 ronalda;f;scottish, english;0
@@ -8805,8 +8706,7 @@ ronaldo;m;portuguese;0
 ronda;f;english;0.89
 ronen;m;jewish;0
 rong;m,f;chinese;0
-roni (1);f;jewish;0
-roni (2);f;english;0
+roni;f;jewish, english;0
 ronit;f;irish;0
 ronnette;f;english;0
 ronnie;m,f;english;0.51
@@ -9205,8 +9105,7 @@ serrena;f;english;0
 servius;m;ancient roman;0.10
 sesto;m;italian;0
 set;m;egyptian mythology;1.75
-seth (1);m;biblical, english;0
-seth (2);m;egyptian mythology (hellenized);0
+seth;m;biblical, english, egyptian mythology (hellenized);0
 sethunya;f;african;0
 seumas;m;scottish;0
 sevan;f,m;armenian;0
@@ -9223,8 +9122,7 @@ sextus;m;ancient roman;0.03
 seymour;m;english;0.03
 shachar;f,m;jewish;0
 shad;m;;0
-shadi (1);m;arabic;0
-shadi (2);f;iranian;0
+shadi;m;arabic, iranian;0
 shadrach;m;biblical;0
 shadya;f;arabic;0
 shae;m,f;english;0
@@ -9299,8 +9197,7 @@ shawn;m,f;english;0
 shawna;f;english;0
 shawnda;f;english;0
 shawnee;f;english;0
-shay (1);m;irish, english;0
-shay (2);m,f;jewish;0
+shay;m,f;irish, english, jewish;0
 shayla;f;english (modern);0
 shayna;f;jewish;0
 shaynah;f;jewish;0
@@ -9454,8 +9351,7 @@ simin;f;iranian;0
 simo;m;finnish;0
 simon;m;english, french, scandinavian, hungarian, slovene, biblical;87.19
 simona;f;italian, romanian, czech, slovene;0.03
-simone (1);f;french;0
-simone (2);m;italian;0
+simone;m,f;french, italian;0
 simonetta;f;italian;0.86
 simonette;f;english;0
 sinclair;m;english;0.48
@@ -9501,8 +9397,7 @@ sofiya;f;russian;0
 sofronio;m;spanish;0
 sohail;m;indian;0
 sohrab;m;iranian;0
-sol (1);f;spanish, portuguese;0
-sol (2);m;jewish;0
+sol;f;spanish, portuguese, jewish;0
 solange;f;french;28.96
 soledad;f;spanish;0.61
 solly;m;jewish;0
@@ -9822,8 +9717,7 @@ tanya;f;russian, english;0
 tanzi;f;english (modern);0
 tapani;m;finnish;0
 tapio;m;finnish, mythology;0
-tara (1);f;english;0
-tara (2);f;indian, hindu mythology;0
+tara;f;indian, hindu mythology, english;0
 taranis;m;celtic mythology;0.03
 taras;m;russian, ukrainian;0.03
 tarek;m;arabic;0
@@ -10029,8 +9923,7 @@ tim;m;english;0.92
 timaeus;m;ancient greek (latinized);0
 timeus;m;;0
 timmy;m;english;0
-timo (1);m;finnish;0
-timo (2);f;ancient greek;0
+timo;m;finnish, ancient greek;0
 timofei;m;russian;0
 timon;m;ancient greek, biblical;1.27
 timotei;m;bulgarian;0
@@ -10077,8 +9970,7 @@ toivo;m;finnish;0
 tola;f;khmer;0.03
 tolly;m;english;0
 tom;m;english;3.12
-toma (1);f;russian;0
-toma (2);m;croatian;0
+toma;m,f;russian, croatian;0
 tomas;m;swedish, norwegian;0
 tomasa;f;spanish;0
 tomasz;m;polish;0
@@ -10094,8 +9986,7 @@ tommie;m,f;english;0
 tommy;m;english;1.08
 tomos;m;welsh;0
 tondra;f;esperanto;0
-toni (1);m;hungarian;0
-toni (2);f;english;0
+toni;m,f;hungarian, english;0
 tonia;f;english;0
 tonio;m;italian;0.48
 tonka;f;slovene;0
@@ -10111,8 +10002,7 @@ torben;m;danish;0
 torborg;f;scandinavian;0
 torcall;m;;0
 tordis;f;norwegian, danish;0.10
-tore (1);m;scandinavian;0
-tore (2);m;italian;0
+tore;m;scandinavian, italian;0
 torgeir;m;norwegian, danish;0
 torger;m;norwegian, danish;0
 torhild;f;norwegian;0
@@ -10189,8 +10079,7 @@ tryphon;m;greek, ancient greek;0
 tryphosa;f;biblical;0
 trystan;m;welsh;0
 tsholofelo;f;african;0
-tu (1);m,f;chinese;0
-tu (2);m,f;vietnamese;0
+tu;m,f;chinese, vietnamese;0
 tuan;m;vietnamese;0
 tuathal;m;irish;0
 tucker;m;english;0.06
@@ -10321,8 +10210,7 @@ valdis;f;;0
 valencia;f;spanish;0.48
 valentin;m;scandinavian, german, french, czech, russian, romanian;1.98
 valentina;f;italian, russian, romanian, ancient roman;0.67
-valentine (1);m;english;0
-valentine (2);f;french;0
+valentine;m,f;english, french;0
 valentino;m;italian;0.64
 valeria;f;italian, spanish, romanian, ancient roman;0
 valerian;m;history;0
