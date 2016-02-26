@@ -13,34 +13,12 @@ controllers.controller('RechercheCtrl', function($scope, $state, $rootScope, Nom
 		setFrequence();
 	});
 	
-	function randomPrenom() {
-		RandomPrenom.getAll(function randomResult(res) {
-			$scope.randomPrenom = res;
-		});
-	}
-	
-	$scope.addToFavoris = function() {
-		FavorisBase.saveOne(favorisAdded, $scope.randomPrenom, true);
-	}
-	
-	function favorisAdded(message) {
-		Message.shortCenter(message);
-	}
-	
 	$scope.search = function() {
 		$rootScope.request = {genre: $scope.dataGenres.genres,
 								frequence: $scope.dataFrequences.frequences,
 								origine: $scope.dataOrigins.origins,
 								lettre: $scope.lettre.text};
         $state.go('app.liste', {}, {reload: true});
-	}
-	
-	function randomResult(res) {
-		if (res == null) {
-			Message.longBottom("Aucun résultat !");
-		} else {
-			$scope.randomPrenom = res;		
-		}
 	}
 	
 	function setGenre() {

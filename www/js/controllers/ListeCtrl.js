@@ -7,7 +7,7 @@ controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, 
 	
 	$scope.$on('$ionicView.enter', function(e) {
 		if ($rootScope.request) {
-			$ionicLoading.show({template: "Chargement des prénoms"});
+			//$ionicLoading.show({template: "Chargement des prénoms"});
 			var liste = true;
 			RandomPrenom.withParams(listPrenoms,
 				$rootScope.request.genre,
@@ -18,18 +18,19 @@ controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, 
 		ADS.show();
 	});
 	
-	$scope.addItems = function() {
-		for (var i = $scope.limit; i < $scope.limit + 20; i++) {
-			if ($scope.prenoms != null && i < $scope.prenoms.length) {
-				$scope.listePrenoms.push($scope.prenoms[i]);	
-			} else {
-				$scope.bouton_plus = false;
-			}
-		}
-		$scope.limit += 20;
-		
-		$ionicLoading.hide();
-	}
+	// $scope.addItems = function() {
+	// 	alert("yo");
+	// 	for (var i = $scope.limit; i < $scope.limit + 20; i++) {
+	// 		if ($scope.prenoms != null && i < $scope.prenoms.length) {
+	// 			$scope.listePrenoms.push($scope.prenoms[i]);	
+	// 		} else {
+ //      			//$scope.noMoreItemsAvailable = true;
+	// 		}
+	// 	}
+	// 	$scope.limit += 20;
+ //    	$scope.$broadcast('scroll.infiniteScrollComplete');
+	// 	$ionicLoading.hide();
+	// }
 	
 	$scope.addToFavoris = function(item) {
 		$ionicPopup.show({title: 'Favoris',
@@ -58,9 +59,29 @@ controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, 
 			$ionicLoading.hide();
 			$scope.bouton_plus = false;
 		} else {
-			$scope.addItems();
+			//$scope.addItems();
+			$scope.loadMore();
 			$scope.bouton_plus = true;
 		}
 	}
-	
+
+
+	$scope.noMoreItemsAvailable = false;
+
+	$scope.loadMore = function() {
+    	for (var i = $scope.limit; i < $scope.limit + 20; i++) {
+			if ($scope.prenoms != null && i < $scope.prenoms.length) {
+				$scope.listePrenoms.push($scope.prenoms[i]);	
+			}
+		}
+		$scope.limit += 20;
+		$ionicLoading.hide();
+
+    	if ($scope.listePrenoms != null && $scope.prenoms != null) {
+	    	if ($scope.listePrenoms.length == $scope.prenoms.length) {
+	    		$scope.noMoreItemsAvailable = true;
+	    	}
+    	}
+    	$scope.$broadcast('scroll.infiniteScrollComplete');
+  	};
 });
