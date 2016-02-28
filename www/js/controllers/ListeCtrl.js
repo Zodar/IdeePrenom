@@ -18,20 +18,6 @@ controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, 
 		ADS.show();
 	});
 	
-	// $scope.addItems = function() {
-	// 	alert("yo");
-	// 	for (var i = $scope.limit; i < $scope.limit + 20; i++) {
-	// 		if ($scope.prenoms != null && i < $scope.prenoms.length) {
-	// 			$scope.listePrenoms.push($scope.prenoms[i]);	
-	// 		} else {
- //      			//$scope.noMoreItemsAvailable = true;
-	// 		}
-	// 	}
-	// 	$scope.limit += 20;
- //    	$scope.$broadcast('scroll.infiniteScrollComplete');
-	// 	$ionicLoading.hide();
-	// }
-	
 	$scope.addToFavoris = function(item) {
 		$ionicPopup.show({title: 'Favoris',
 			title: 'Voulez vous ajouter ' + item.prenom + ' à vos favoris ?',
@@ -59,7 +45,6 @@ controllers.controller('ListeCtrl', function($scope, $rootScope, $ionicLoading, 
 			$ionicLoading.hide();
 			$scope.bouton_plus = false;
 		} else {
-			//$scope.addItems();
 			$scope.loadMore();
 			$scope.bouton_plus = true;
 		}

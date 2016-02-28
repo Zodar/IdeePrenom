@@ -1,45 +1,11 @@
 <ion-view view-title="Liste">
 	<ion-content class="padding">
-		
-
-
-<!-- 		<div class="list">
-	   		<div class="row">
-	   			<div class="col col-100">
-	        		<div class="item item-divider to_bold">
-	        			Prénoms
-        			</div> -->
-
-
-
-				    <!-- <ion-list>
-				    	<ion-item ng-repeat="item in listePrenoms" item="item" ng-click="addToFavoris(item);" class="item background_{{item.genre}}">
-				    		<p class="to_bold prenom_liste"> {{item.prenom}} </p>
-			       			<p> {{item.origine}}, {{item.frequence}} </p>
-		       		  	</ion-item> 
-		       		</ion-list>
-
-	   		      	<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll> -->
-
-		       		
-
-<!-- 		       		<button ng-show="bouton_plus" ng-click="addItems();" class="button button-balanced col col-100">
-		       			Afficher plus de résultat
-		       		</button>
-		        </div>
-	        </div>
-	   	</div> -->
-
-
-       <ion-list>
-
-				    	<ion-item ng-repeat="item in listePrenoms" item="item" ng-click="addToFavoris(item);" class="item background_{{item.genre}}">
-				    		<p class="to_bold prenom_liste"> {{item.prenom}} </p>
-			       			<p> {{item.origine}}, {{item.frequence}} </p>
-		       		  	</ion-item>
-
-      </ion-list>
-
-      <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+  		<ion-list>
+   			<ion-item ng-repeat="item in listePrenoms" item="item" ng-click="addToFavoris(item);" class="item background_{{item.genre}}">
+	    		<p class="to_bold prenom_liste"> {{item.prenom}} </p>
+   				<p> {{item.origine}}, {{item.frequence}} </p>
+   		  	</ion-item>
+		</ion-list>
+		<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
   	</ion-content>
 </ion-view>
